@@ -1,4 +1,4 @@
-import { css } from '/assets/js/lit-core.min.js';
+import { css } from '../js/lit-core.min.js';
 
 export const styles = css`
 
