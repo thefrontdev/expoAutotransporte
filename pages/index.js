@@ -24,19 +24,19 @@ class App extends LitElement {
     super();
     this._router = new Router(this, [
       {
-        path: '/', render: () => html`<home-page></home-page>`
+        path: '/expoAutotransporte', render: () => html`<home-page></home-page>`
       },
       {
-        path: '/expositores', render: () => html`<exhibitors-page></exhibitors-page>`
+        path: '/expoAutotransporte/expositores', render: () => html`<exhibitors-page></exhibitors-page>`
       },
       {
-        path: '/visitantes', render: ()=> html`<visitors-page></visitors-page>`
+        path: '/expoAutotransporte/visitantes', render: ()=> html`<visitors-page></visitors-page>`
       },
       {
-        path: '/prensa', render: ()=> html`<press-page></press-page>`
+        path: '/expoAutotransporte/prensa', render: ()=> html`<press-page></press-page>`
       },
       {
-        path: '/registro-visitantes', render: ()=> html`<visitors-registration></visitors-registration>`
+        path: '/expoAutotransporte/registro-visitantes', render: ()=> html`<visitors-registration></visitors-registration>`
       },
     ]);
   }
