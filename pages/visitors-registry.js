@@ -1,5 +1,5 @@
-import { LitElement, html, css } from '/assets/js/lit-core.min.js';
-import { styles } from "/assets/styles/styles.js";
+import { LitElement, html, css } from '../assets/js/lit-core.min.js';
+import { styles } from "../assets/styles/styles.js";
 
 class EventRegistrationForm extends LitElement {
   static styles = [

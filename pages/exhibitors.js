@@ -1,4 +1,4 @@
-import { LitElement, html, css } from'/assets/js/lit-core.min.js';
+import { LitElement, html, css } from'../assets/js/lit-core.min.js';
 import { styles } from "../assets/styles/styles.js";
 
 class Exhibitors extends LitElement {
@@ -73,7 +73,7 @@ class Exhibitors extends LitElement {
   render() {
     return html`
       <main class="container">
-        <img src="/assets/images/stand.webp" alt="Expositores" />
+        <img src="../assets/images/stand.webp" alt="Expositores" />
         <div class="content">
           <h1>¿QUIERES TENER UN STAND COMERCIAL?</h1>
           <p>
@@ -85,7 +85,7 @@ class Exhibitors extends LitElement {
             <a href="mailto:" class="button">CORREO ELECTRÓNICO</a>
             <a href="tel:" class="button">WHATSAPP</a>
           </div>
-          <a download="/" target="_blank"><img src="/assets/images/documento-icon.svg" alt="icono de documento"> Descarga la información necesaria</a>
+          <a download="/" target="_blank"><img src="../assets/images/documento-icon.svg" alt="icono de documento"> Descarga la información necesaria</a>
         </div>
       </main>
     `;

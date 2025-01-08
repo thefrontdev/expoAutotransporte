@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '/assets/js/lit-core.min.js';
+import { LitElement, html, css } from '../../assets/js/lit-core.min.js';
 
 class SocialMedia extends LitElement {
   static properties = {
@@ -176,10 +176,10 @@ class SocialMedia extends LitElement {
   constructor() {
     super();
     this.icons = {
-      tiktok: '/assets/images/social-media/tik-tok-150.svg',
-      facebook: '/assets/images/social-media/facebook-150.svg',
-      instagram: '/assets/images/social-media/instagram-150.svg',
-      youtube: '/assets/images/social-media/youtube-150.svg',
+      tiktok: '../../assets/images/social-media/tik-tok-150.svg',
+      facebook: '../../assets/images/social-media/facebook-150.svg',
+      instagram: '../../assets/images/social-media/instagram-150.svg',
+      youtube: '../../assets/images/social-media/youtube-150.svg',
     }
   }
 

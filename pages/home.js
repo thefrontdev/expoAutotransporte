@@ -1,11 +1,11 @@
-import { LitElement, html, css } from "/assets/js/lit-core.min.js";
+import { LitElement, html, css } from "../assets/js/lit-core.min.js";
 import { styles } from "../assets/styles/styles.js";
 
-import "/components/countdown/countdown.js";
-import "/components/speaker/speaker.js";
-import "/components/carrousel/carrousel.js";
-import "/components/social-media/social-media.js";
-import "/components/youtube/youtube.js";
+import "../components/countdown/countdown.js";
+import "../components/speaker/speaker.js";
+import "../components/carrousel/carrousel.js";
+import "../components/social-media/social-media.js";
+import "../components/youtube/youtube.js";
 
 class Home extends LitElement {
   static styles = [
@@ -17,7 +17,7 @@ class Home extends LitElement {
       }
       
       #inicio {
-        background: linear-gradient(-5deg, #0064d5 15%, #00c60026 85%), url('/assets/images/main_hero.webp') no-repeat center right/contain;
+        background: linear-gradient(-5deg, #0064d5 15%, #00c60026 85%), url('../assets/images/main_hero.webp') no-repeat center right/contain;
         height: calc(min(45rem, 100vh) + 3rem);
         padding: 6rem 0 2rem;
       
@@ -78,14 +78,14 @@ class Home extends LitElement {
             display: inline-block;
             height: 1.5rem;
             width: 2.5rem;
-            background: url('/assets/images/centro_convenciones_edomex.svg') no-repeat center/contain;
+            background: url('../assets/images/centro_convenciones_edomex.svg') no-repeat center/contain;
             transition: background 0.25s;
           }
           &:hover {
             color: #C84885;
             text-shadow: 0 0.125rem 0.125rem #0e0e0e80;
             & #convenciones-logo {
-              background: url('/assets/images/centro_convenciones_color.svg') no-repeat center/contain;
+              background: url('../assets/images/centro_convenciones_color.svg') no-repeat center/contain;
             }
           }
         }
@@ -168,7 +168,7 @@ class Home extends LitElement {
       
       #visitors {
         background: #fafafa;
-        background: url('/assets/images/visitantes.webp') no-repeat top left/contain;
+        background: url('../assets/images/visitantes.webp') no-repeat top left/contain;
         & .section-title {
           color: #0064d5;
         }
@@ -239,7 +239,7 @@ class Home extends LitElement {
           box-sizing: border-box;
         }
         #inicio {
-          background: linear-gradient(-5deg, #0064d5 15%, #00c60026 85%), url('/assets/images/main_hero.webp') no-repeat 90% 0%/cover;
+          background: linear-gradient(-5deg, #0064d5 15%, #00c60026 85%), url('../assets/images/main_hero.webp') no-repeat 90% 0%/cover;
           height: calc(min(45rem, 100vh) + 3rem);
           padding: 6rem 0 0;
           & hgroup {
@@ -346,7 +346,7 @@ class Home extends LitElement {
       <main class="container">
         <h2 class="section-title">CONDUCIENDO AL FUTURO DEL AUTOTRANSPORTE</h2>
         <div class="content">
-          <img src="/assets/images/logo_about.webp" alt="EXPO AUTOTRANSPORTE 2025">
+          <img src="../assets/images/logo_about.webp" alt="EXPO AUTOTRANSPORTE 2025">
           <p>
             La EXPO AUTOTRANSPORTE 2025 reúne a empresarios, microempresarios, proveedores, transportistas y entusiastas,  conectando a la industria para avanzar hacia un futuro más eficiente y sostenible. <br>
             Descubre las últimas innovaciones tecnológicas, participa en conferencias y paneles con expertos, y establece valiosas conexiones que impulsarán el autotransporte en México.</p>
@@ -358,10 +358,10 @@ class Home extends LitElement {
       <main class="container">
         <h2 class="section-title">CONOCE A NUESTROS CONFERENCISTAS</h2>
         <div class="speakers-content">
-          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="/assets/images/conferencista.webp"></speaker-item>
-          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="/assets/images/conferencista.webp"></speaker-item>
-          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="/assets/images/conferencista.webp"></speaker-item>
-          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="/assets/images/conferencista.webp"></speaker-item>
+          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="../assets/images/conferencista.webp"></speaker-item>
+          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="../assets/images/conferencista.webp"></speaker-item>
+          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="../assets/images/conferencista.webp"></speaker-item>
+          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="../assets/images/conferencista.webp"></speaker-item>
         </div>
       </main>
     </section>
@@ -370,15 +370,15 @@ class Home extends LitElement {
       <main class="container">
         <h2 class="section-title">PATROCINADORES</h2>
         <div class="sponsors-content">
-          <a href="https://www.grupotab.com.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/tab_logo.webp" alt="Grupo TAB"></a>
-          <a href="https://cima-aviacion.com.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/cima_logo.webp" alt="CIMA Aviación"></a>
+          <a href="https://www.grupotab.com.mx/" target="_blank" rel="noopener noreferrer"><img src="../assets/images/tab_logo.webp" alt="Grupo TAB"></a>
+          <a href="https://cima-aviacion.com.mx/" target="_blank" rel="noopener noreferrer"><img src="../assets/images/cima_logo.webp" alt="CIMA Aviación"></a>
         </div>
         <h3 class="section-title">NUESTROS ALIADOS EN EL CAMINO</h3>
         <image-carousel></image-carousel>
         <h3 class="section-title">ORGANIZACIONES</h3>
         <div class="orgs-content">
-          <a href="https://edomex.gob.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/edomex_logo.webp" alt="Estado de México"></a>
-          <a href="https://centrodeconvenciones.edomex.gob.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/convenciones_logo.webp" alt="Centrod de Convenciones Edomex"></a>
+          <a href="https://edomex.gob.mx/" target="_blank" rel="noopener noreferrer"><img src="../assets/images/edomex_logo.webp" alt="Estado de México"></a>
+          <a href="https://centrodeconvenciones.edomex.gob.mx/" target="_blank" rel="noopener noreferrer"><img src="../assets/images/convenciones_logo.webp" alt="Centrod de Convenciones Edomex"></a>
         </div>
       </main>
     </section>

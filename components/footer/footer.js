@@ -1,10 +1,10 @@
-import { LitElement, html, css } from '/assets/js/lit-core.min.js';
+import { LitElement, html, css } from '../../assets/js/lit-core.min.js';
 
 class FooterComponent extends LitElement {
   static styles = css`
     @font-face {
       font-family: 'Roboto';
-      src: url('/assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+      src: url('../../assets/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
       font-weight: 400;
     }
     :host {
@@ -86,7 +86,7 @@ class FooterComponent extends LitElement {
   render() {
     return html`
       <div class="footer-content">
-        <a href="/"><img src="/assets/images/logo_about.webp" alt="Expo Autotransporte"></a>
+        <a href="/"><img src="../../assets/images/logo_about.webp" alt="Expo Autotransporte"></a>
         <div class="footer-contact">
           <p>Contáctanos</p>
           <ul>

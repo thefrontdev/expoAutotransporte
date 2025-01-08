@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '/assets/js/lit-core.min.js';
+import { LitElement, html, css } from '../assets/js/lit-core.min.js';
 import { styles } from "../assets/styles/styles.js";
 
 class PressPage extends LitElement {
@@ -94,8 +94,8 @@ class PressPage extends LitElement {
       <main class="container">
         <div class="box-container">
           <div class="img-box">
-            <img src="/assets/images/prensa_front.webp" alt="Prensa" />
-            <img src="/assets/images/prensa_back.webp" alt="Prensa" class="back" />
+            <img src="../assets/images/prensa_front.webp" alt="Prensa" />
+            <img src="../assets/images/prensa_back.webp" alt="Prensa" class="back" />
           </div>
         </div>
         <div class="content">

@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '/assets/js/lit-core.min.js';
+import { LitElement, html, css } from '../../assets/js/lit-core.min.js';
 
 class SpeakerItem extends LitElement {
   static properties = {

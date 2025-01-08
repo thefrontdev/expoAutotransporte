@@ -1,12 +1,12 @@
 import { css, html, LitElement } from './../assets/js/lit-core.min.js';
 import { Router } from 'https://cdn.jsdelivr.net/npm/@lit-labs/router@0.1.3/development/router.min.js';
-import '/components/menu/menu.js';
-import '/components/footer/footer.js';
-import '/pages/home.js';
-import '/pages/exhibitors.js';
-import '/pages/visitors.js';
-import '/pages/press.js';
-import '/pages/visitors-registry.js'
+import '../components/menu/menu.js';
+import '../components/footer/footer.js';
+import '../pages/home.js';
+import '../pages/exhibitors.js';
+import '../pages/visitors.js';
+import '../pages/press.js';
+import '../pages/visitors-registry.js'
 
 import { styles } from './../assets/styles/styles.js';
 

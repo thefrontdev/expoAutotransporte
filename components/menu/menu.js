@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '/assets/js/lit-core.min.js';
+import { LitElement, html, css } from '../../assets/js/lit-core.min.js';
 
 class Menu extends LitElement {
   static styles = css`
@@ -226,7 +226,7 @@ class Menu extends LitElement {
     <nav role="navigation" class="${this.scroll ? 'scroll' : ''}">
       <div class="nav-container">
         <a href="/" id="logo">
-          <img src="/assets/images/logo_color.webp" alt="Logo" height="40" width="136">
+          <img src="../../assets/images/logo_color.webp" alt="Logo" height="40" width="136">
         </a>
         <input type="checkbox">
         <div class="hamburger-menu">

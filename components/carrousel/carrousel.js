@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '/assets/js/lit-core.min.js';
+import { LitElement, html, css } from '../../assets/js/lit-core.min.js';
 
 class ImageCarousel extends LitElement {
   static properties = {
@@ -48,13 +48,13 @@ class ImageCarousel extends LitElement {
   constructor() {
     super();
     this.images = [
-      '/assets/images/partners/bernal.webp',
-      '/assets/images/partners/bpfleet.webp',
-      '/assets/images/partners/corvus.webp',
-      '/assets/images/partners/edenred.webp',
-      '/assets/images/partners/faw.webp',
-      '/assets/images/partners/mercedes.webp',
-      '/assets/images/partners/totalenergies.webp',
+      '../../assets/images/partners/bernal.webp',
+      '../../assets/images/partners/bpfleet.webp',
+      '../../assets/images/partners/corvus.webp',
+      '../../assets/images/partners/edenred.webp',
+      '../../assets/images/partners/faw.webp',
+      '../../assets/images/partners/mercedes.webp',
+      '../../assets/images/partners/totalenergies.webp',
     ];
     this.currentIndex = 0;
   }

@@ -1,4 +1,4 @@
-import { LitElement, html, css } from '/assets/js/lit-core.min.js';
+import { LitElement, html, css } from '../assets/js/lit-core.min.js';
 import { styles } from "../assets/styles/styles.js";
 
 class Visitors extends LitElement {
@@ -72,7 +72,7 @@ class Visitors extends LitElement {
   render() {
     return html`
       <main class="container">
-        <img src="/assets/images/visitors.webp" alt="Visitantes" />
+        <img src="../assets/images/visitors.webp" alt="Visitantes" />
         <div class="content">
           <h1>¿TE GUSTARÍA PARTICIPAR?</h1>
           <p>
@@ -81,8 +81,8 @@ class Visitors extends LitElement {
             ¡No te pierdas el evento que define el rumbo del autotransporte! 
           </p>
           <div class="links">
-            <a href="#"><img src="/assets/images/bed.webp" alt="bed icon"> Opciones de Hospedaje</a>
-            <a href="#"><img src="/assets/images/time-limit.webp" alt="calendar-icon"> Programa del evento</a>
+            <a href="#"><img src="../assets/images/bed.webp" alt="bed icon"> Opciones de Hospedaje</a>
+            <a href="#"><img src="../assets/images/time-limit.webp" alt="calendar-icon"> Programa del evento</a>
           </div>
 
           <a href="/registro-visitantes" class="button primary">REGISTRATE AQUÍ</a>
