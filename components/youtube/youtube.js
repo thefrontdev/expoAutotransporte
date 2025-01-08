@@ -65,13 +65,13 @@ class Youtube extends LitElement {
       box-sizing: border-box;
       display: flex;
       gap: 2rem;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: stretch;
       flex-wrap: wrap;
       & a {
         background: #fafafa;
         backdrop-filter: blur(0.25rem);
-        width: 100%;
+        width: 18rem;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
@@ -95,6 +95,13 @@ class Youtube extends LitElement {
           & img {
             filter: grayscale(0%);
           }
+        }
+      }
+    }
+    @media (width < 500px) {
+      .list {
+        & a {
+          width: 100%;
         }
       }
     }

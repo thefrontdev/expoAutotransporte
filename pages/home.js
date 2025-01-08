@@ -233,6 +233,13 @@ class Home extends LitElement {
           align-items: center;
         }
       }
+      @media (1024px <= width<= 1440px) {
+        #inicio {
+          background: linear-gradient(-5deg, #0064d5 15%, #00c60026 85%), url('/assets/images/main_hero.webp') no-repeat center bottom/contain;
+          height: 100vh;
+          padding: 2rem 0 1rem;
+        }
+      }
       @media screen and (max-width: 500px) {
         section:not(#inicio) {
           padding: 2rem 0;
@@ -289,6 +296,7 @@ class Home extends LitElement {
             align-items: center;
             & img {
               order: 1;
+              width: 100%;
             }
             & p {
               order: 0;

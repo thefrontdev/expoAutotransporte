@@ -79,6 +79,11 @@ class FooterComponent extends LitElement {
       .footer-content {
         flex-direction: row;
         justify-content: space-between;
+        & a {
+          & img {
+            width: 100%;
+          }
+        }
       }
     }
   `;
