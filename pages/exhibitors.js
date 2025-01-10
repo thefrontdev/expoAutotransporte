@@ -45,6 +45,12 @@ class Exhibitors extends LitElement {
           }
         }
       }
+
+      @media (1024px <= width<= 1440px) {
+        .container {
+          height: 100%;
+        }
+      }
       
       @media screen and (max-width: 500px) {
         .container {
@@ -73,7 +79,7 @@ class Exhibitors extends LitElement {
   render() {
     return html`
       <main class="container">
-        <img src="/assets/images/stand.webp" alt="Expositores" />
+        <img src="/assets/images/stands.jpg" alt="Expositores" />
         <div class="content">
           <h1>¿QUIERES TENER UN STAND COMERCIAL?</h1>
           <p>

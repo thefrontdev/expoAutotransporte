@@ -18,7 +18,7 @@ class ImageCarousel extends LitElement {
         display: flex;
         align-items: center;
         gap: 4rem;
-        animation: slide 20s linear infinite;
+        animation: slide 40s linear infinite;
         & img {
           height: 4rem;
           width: auto;
@@ -48,13 +48,33 @@ class ImageCarousel extends LitElement {
   constructor() {
     super();
     this.images = [
+      '/assets/images/partners/axone.png',
       '/assets/images/partners/bernal.webp',
-      '/assets/images/partners/bpfleet.webp',
-      '/assets/images/partners/corvus.webp',
-      '/assets/images/partners/edenred.webp',
-      '/assets/images/partners/faw.webp',
-      '/assets/images/partners/mercedes.webp',
-      '/assets/images/partners/totalenergies.webp',
+      '/assets/images/partners/biklacargo.png',
+      '/assets/images/partners/calorheat.png',
+      '/assets/images/partners/centradetubos.png',
+      '/assets/images/partners/corvus.png',
+      '/assets/images/partners/dextel.svg',
+      '/assets/images/partners/dfrc.png',
+      '/assets/images/partners/dieselprotection.png',
+      '/assets/images/partners/dieselgroup.png',
+      '/assets/images/partners/facturoporti.png',
+      '/assets/images/partners/faw.png',
+      '/assets/images/partners/frenelsa.jpeg',
+      '/assets/images/partners/intelyvale.png',
+      '/assets/images/partners/inyecdiesel.png',
+      '/assets/images/partners/leon.png',
+      '/assets/images/partners/md.png',
+      '/assets/images/partners/movilidad3.png',
+      '/assets/images/partners/mucavi.png',
+      '/assets/images/partners/ous.png',
+      '/assets/images/partners/rivera.png',
+      '/assets/images/partners/sama.png',
+      '/assets/images/partners/segu.png',
+      '/assets/images/partners/sidpower.png',
+      '/assets/images/partners/sinditol.png',
+      '/assets/images/partners/turbo.png',
+      '/assets/images/partners/zapata.png',
     ];
     this.currentIndex = 0;
   }

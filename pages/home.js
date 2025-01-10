@@ -235,9 +235,13 @@ class Home extends LitElement {
       }
       @media (1024px <= width<= 1440px) {
         #inicio {
-          background: linear-gradient(-5deg, #0064d5 15%, #00c60026 85%), url('/assets/images/main_hero.webp') no-repeat center bottom/contain;
+          background: linear-gradient(-5deg, #0064d5 15%, #00c60026 85%), url('/assets/images/main_hero.webp') no-repeat center 2.5rem/cover;
           height: 100vh;
-          padding: 2rem 0 1rem;
+          padding: 0;
+          & .container {
+            padding: 8% 0px;
+            height: fit-content;
+          }
         }
       }
       @media screen and (max-width: 500px) {
@@ -268,6 +272,7 @@ class Home extends LitElement {
               font-size: 3.5rem;
               top: 1.125rem;
               right: 5%;
+              text-shadow: 0 0 0.25rem #0e0e0e40;
             }
           }
 

@@ -12,6 +12,10 @@ class PressPage extends LitElement {
         display: flex;
         align-items: center;
         gap: 2rem;
+        & img {
+          width: auto;
+          height: 31rem;
+        }
         & .box-container {
           width: 17rem;
           height: 31rem;
@@ -66,6 +70,11 @@ class PressPage extends LitElement {
           transform: rotateY(180deg);
         }
       }
+      @media (1024px <= width<= 1440px) {
+        .container {
+          height: 100%;
+        }
+      }
       @media screen and (max-width: 500px) {
         .container {
           height: 100%;
@@ -92,12 +101,7 @@ class PressPage extends LitElement {
   render() {
     return html`
       <main class="container">
-        <div class="box-container">
-          <div class="img-box">
-            <img src="/assets/images/prensa_front.webp" alt="Prensa" />
-            <img src="/assets/images/prensa_back.webp" alt="Prensa" class="back" />
-          </div>
-        </div>
+        <img src="/assets/images/prensa.png" alt="Prensa">
         <div class="content">
           <h1>¿QUIERES CUBRIR NUESTRO EVENTO?</h1>
           <p>

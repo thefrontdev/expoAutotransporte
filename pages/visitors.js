@@ -46,6 +46,11 @@ class Visitors extends LitElement {
         }
       }
     }
+    @media (1024px <= width<= 1440px) {
+      .container {
+        height: 100%;
+      }
+    }
     @media screen and (max-width: 500px) {
       .container {
         height: 100%;
@@ -72,7 +77,7 @@ class Visitors extends LitElement {
   render() {
     return html`
       <main class="container">
-        <img src="/assets/images/visitors.webp" alt="Visitantes" />
+        <img src="/assets/images/visitantes.jpg" alt="Visitantes" />
         <div class="content">
           <h1>¿TE GUSTARÍA PARTICIPAR?</h1>
           <p>

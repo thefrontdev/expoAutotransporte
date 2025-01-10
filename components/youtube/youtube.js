@@ -22,7 +22,7 @@ class Youtube extends LitElement {
       fetchRecord.count = 0;
     }
 
-    if (fetchRecord.count < 25) {
+    if (fetchRecord.count < 5) {
       fetchRecord.count++;
       localStorage.setItem('fetchRecord', JSON.stringify(fetchRecord));
       return true;
