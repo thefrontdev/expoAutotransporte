@@ -67,6 +67,14 @@ class EventRegistrationForm extends LitElement {
         align-self: end;
       }
     }
+    @media (width < 1024px){
+      .container {
+        height: 100%;
+      }
+      .form-container {
+        width: 80%;
+      }
+    }
   `];
 
   render() {

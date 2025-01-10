@@ -51,6 +51,17 @@ class Visitors extends LitElement {
         height: 100%;
       }
     }
+    @media (500px < width < 1024px) {
+      .container {
+        height: 100%;
+        flex-direction: column;
+        padding-top: 3rem;
+        & img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
     @media screen and (max-width: 500px) {
       .container {
         height: 100%;
@@ -63,9 +74,14 @@ class Visitors extends LitElement {
           width: 100%;
           box-sizing: border-box;
           padding: 0 1rem;
-          & .buttons {
+          & .links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: center
             & a {
               margin: 0 0.75rem;
+              width: fit-content;
             }
           }
         }

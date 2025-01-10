@@ -35,6 +35,12 @@ class CountdownTimer extends LitElement {
       }
     }
 
+    @media (500px < width < 1024px) {
+      .countdown{
+        justify-content: space-evenly;
+      }
+    }
+
     @media screen and (max-width: 500px) {
       .countdown {
         gap: 0.5rem;

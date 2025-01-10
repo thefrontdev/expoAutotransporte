@@ -51,6 +51,18 @@ class Exhibitors extends LitElement {
           height: 100%;
         }
       }
+
+      @media (500px < width < 1024px) {
+        .container {
+          height: 100%;
+          flex-direction: column;
+          padding-top: 3rem;
+          & img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
       
       @media screen and (max-width: 500px) {
         .container {
@@ -65,8 +77,13 @@ class Exhibitors extends LitElement {
             box-sizing: border-box;
             padding: 0 1rem;
             & .buttons {
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              align-items: center
               & a {
                 margin: 0 0.75rem;
+                width: fit-content;
               }
             }
           }
@@ -88,8 +105,8 @@ class Exhibitors extends LitElement {
             Para más información y detalles sobre la contratación de espacios, contáctanos vía: 
           </p>
           <div class="buttons">
-            <a href="mailto:" class="button">CORREO ELECTRÓNICO</a>
-            <a href="tel:" class="button">WHATSAPP</a>
+            <a href="mailto:breyhamrodriguez@expoautotransporte.com?subject=Expositor%20en%20ExpoAutotransporte%202025&body=Quiero%20formar%20parte%20de%20los%20expositores%20para%20la%20ExpoAutotransporte%202025" class="button">CORREO ELECTRÓNICO</a>
+            <a href="https://wa.link/04b8l7" class="button">WHATSAPP</a>
           </div>
           <a download="/" target="_blank"><img src="/assets/images/documento-icon.svg" alt="icono de documento"> Descarga la información necesaria</a>
         </div>

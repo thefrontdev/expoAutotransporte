@@ -244,6 +244,80 @@ class Home extends LitElement {
           }
         }
       }
+      @media (500px < width < 1024px) {
+        #inicio {
+          background: linear-gradient(-5deg, #0064d5 15%, #00c60026 85%), url('/assets/images/main_hero.webp') no-repeat right 2.5rem/cover;
+          height: 90vh;
+          padding: 0;
+          box-sizing: border-box;
+          & .container {
+            padding: 25% 2rem 0;
+            height: fit-content;
+            & hgroup {
+              & #edition {
+                font-size: 9rem;
+                & span {
+                  font-size: 3rem;
+                }
+              }
+              & #year {
+                font-size: 7rem;
+                top: 1.25rem;
+                right: 1%;
+              }
+              & #main-title {
+                font-size: 3.25rem;
+              }
+            }
+            & #location {
+              margin: 0 auto 2rem;
+            }
+            & .button {
+              display: block;
+              width: fit-content;
+              margin: 0 auto;
+            }
+            & p {
+              width: fit-content;
+              margin: 2rem auto;
+            }
+          }
+        }
+        #about {
+          padding-top: 2rem;
+          & .container {
+            padding: 0 2rem;
+            & .content {
+              flex-direction: column;
+              & p {
+                order: 0;
+              }
+              & img {
+                order: 1;
+              }
+            }
+          }
+        }
+        #speakers {
+          & .container {
+            padding: 0 2rem;
+          }
+        }
+        #visitors {
+          padding-top: 2rem;
+          background: inherit;
+          & .container {
+            padding: 0 2rem;
+            box-sizing: border-box;
+            & .content {
+              width: 100%;
+            }
+          }
+        }
+        #map {
+          padding: 2rem 0;
+        }
+      }
       @media screen and (max-width: 500px) {
         section:not(#inicio) {
           padding: 2rem 0;
@@ -271,13 +345,14 @@ class Home extends LitElement {
             & #year {
               font-size: 3.5rem;
               top: 1.125rem;
-              right: 5%;
-              text-shadow: 0 0 0.25rem #0e0e0e40;
+              right: 2%;
+              text-shadow: 0 0 0.25rem #0e0e0e80;
             }
           }
 
           & #location {
             margin: 0 0 2rem 0;
+            max-width: 100%;
           }
 
           .button {
@@ -311,7 +386,7 @@ class Home extends LitElement {
 
         #speakers {
           & .speakers-content {
-            gap: 1rem;
+            gap: 0.5rem;
           }
         }
 

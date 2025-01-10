@@ -29,6 +29,9 @@ class FooterComponent extends LitElement {
       align-items: center;
       flex-wrap: wrap;
       font-family: 'Roboto', sans-serif;
+      & a img {
+        width: 100%;
+      }
       & .footer-contact, & .footer-social-media {
         & a {
           color: #fafafa;
@@ -75,6 +78,22 @@ class FooterComponent extends LitElement {
         }
       }
     }
+
+    @media (500px < width < 1024px) {
+      .footer-content {
+        padding: 0 2rem 2rem;
+        & a {
+          width: 50%;
+        }
+        & .footer-social-media {
+          width: 100%;
+          & div {
+            justify-content: space-around;
+          }
+        }
+      }
+    }
+
     @media (min-width: 600px) {
       .footer-content {
         flex-direction: row;
