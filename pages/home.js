@@ -449,10 +449,9 @@ class Home extends LitElement {
       <main class="container">
         <h2 class="section-title">CONOCE A NUESTROS CONFERENCISTAS</h2>
         <div class="speakers-content">
-          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="/assets/images/conferencista.webp"></speaker-item>
-          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="/assets/images/conferencista.webp"></speaker-item>
-          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="/assets/images/conferencista.webp"></speaker-item>
-          <speaker-item name="Joe Doe" position="CEO de Doe Corporation" imageURL="/assets/images/conferencista.webp"></speaker-item>
+          <speaker-item name="Facturo por ti" position="" imageURL="/assets/images/FacturoPorTi.png"></speaker-item>
+          <speaker-item name="Israel" position="" imageURL="/assets/images/Israel.png"></speaker-item>
+          <speaker-item name="Sergio" position="" imageURL="/assets/images/Sergio.png"></speaker-item>
         </div>
       </main>
     </section>
