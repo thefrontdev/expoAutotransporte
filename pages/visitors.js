@@ -24,6 +24,11 @@ class Visitors extends LitElement {
           color: #0064d5;
           text-align: center;
         }
+        & p {
+          line-height: 1.5;
+          text-align: justify;
+          text-wrap: wrap balance;
+        }
         & .button {
           text-align: center;
           width: max-content;

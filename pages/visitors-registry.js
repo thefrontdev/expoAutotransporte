@@ -1,10 +1,14 @@
 import { LitElement, html, css } from '/assets/js/lit-core.min.js';
 import { styles } from "/assets/styles/styles.js";
+import { DB } from '/assets/js/db.js';
 
 class EventRegistrationForm extends LitElement {
   static styles = [
   styles,
   css`
+    .hidden {
+      display: none;
+    }
     .container {
       height: calc(100vh - 14.25rem);
       min-height: max-content;
@@ -66,7 +70,23 @@ class EventRegistrationForm extends LitElement {
         width: max-content;
         align-self: end;
       }
+      &[hidden] {
+        display: none;
+      }
     }
+    #success, #error {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      &.hidden {
+        display: none;
+      }
+      & p {
+        margin: 1rem 0;
+      }
+    }
+
     @media (500px < width < 1024px){
       .container {
         height: 100%;
@@ -85,10 +105,19 @@ class EventRegistrationForm extends LitElement {
     }
   `];
 
+  constructor() {
+    super();
+    this.showForm = true;
+    this.showSucess = false;
+    this.showError = false;
+    this.name = '';
+    this.id = '';
+  }
+
   render() {
     return html`
     <main class="container">
-      <div class="form-container">
+      <div class="form-container ${!this.showForm ? 'hidden' : ''}" ?hidden=${!this.showForm}>
         <h2>Por favor llena el formulario para participar</h2>
         <form @submit="${this._handleSubmit}">
           <label for="name">Nombre:</label>
@@ -143,30 +172,89 @@ class EventRegistrationForm extends LitElement {
             </div>
           
           <button class="button" type="submit">Registrarse</button>
-          <img id="qrcode" width="100" height="100"/>
         </form>
       </div>
+      
+      <div id="success" class="form-container ${!this.showSucess ? 'hidden' : ''}">
+        <img src="/assets/images/truck-check.svg" alt="Camión con palomita">
+        <p>¡FELICIDADES!</p>
+        <p>
+          Gracias por registrarte ${this.name}, en breve recibiras un correo electrónico (recuerda revisar tu carpeta de <i>"SPAM"</i> o <i>"Correo no deseado"</i>.
+          <br>
+          Para agilizar tu acceso el día del evento, por favor guarda y presenta el código QR que se encuentra debajo. Este código es tu pase personal y será necesario para el ingreso.
+          </p>
+          <a href="https://api.qrserver.com/v1/create-qr-code/?data=https://expoautotransporte.com/${this.id}" download="QR.png">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://expoautotransporte.com/${this.id}" alt="Código QR" width="200px" height="200px">
+          </a>
+          <a href="/" class="button">Regresar al inicio</a>
+      </div>
+      
+      <div id="error" class="form-container ${!this.showError ? 'hidden' : ''}">
+        <img src="/assets/images/tow-truck.svg" alt="Grua">
+        <p>¡OH NO!</p>
+        <p>
+          ${this.messageError}
+        <p>
+        <a href="/" class="button">Regresar al inicio</a>
+      </div>
+
     </main>
     `;
   }
 
-  generateQR() {
-    const qrelement = this.shadowRoot.querySelector('#qrcode');
-    console.log(qrelement);
-    qrelement.setAttribute('src', 'https://api.qrserver.com/v1/create-qr-code/?data=https://google.com.mx');
-    console.log(qrelement);
+  sendEmail(name, email, id) {
+    const templateParams = {
+      to_name: name,
+      to_email: email,
+      message: '¡Gracias por registrarte en la Expo Autotransporte! Estamos emocionados de contar contigo en este gran evento, donde exploraremos lo último en tecnología, innovación y tendencias del autotransporte.\n Para agilizar tu acceso el día del evento, por favor guarda y presenta el código QR adjunto. Este código es tu pase personal y será necesario para el ingreso.',
+      id,
+    };
+
+    emailjs.init({
+      publicKey: 'Qegkd8YnDmsyZ1VwZ',
+      limitRate: {
+        id: 'app',
+        throttle: 5000,
+      },
+    });
+
+    emailjs.send('ser_expo_autotransportes', 'template_expo_auto', templateParams).then(
+      (response) => {
+        console.log("Correo enviado", response.status, response.text);
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      },
+    );
   }
 
-  _handleSubmit(event) {
+  async _handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = {
       name: formData.get('name'),
       email: formData.get('email'),
-      event: formData.get('event')
+      phone: formData.get('tel'),
+      company: formData.get('company'),
+      position: formData.get('position'),
+      address: formData.get('address'),
+      postalCode: formData.get('cp'),
+      state: formData.get('state'),
+      municipality: formData.get('municipality'),
+      neighborhood: formData.get('neighborhood'),
+      country: formData.get('country'),
     };
-    this.generateQR();
-    console.log('Form Data Submitted:', data);
+    const db = new DB();
+    const insertedData = await db.insertData(data);
+    console.log(insertedData);
+    this.showForm = false;
+    this.showError = insertedData.error;
+    this.messageError = insertedData.error ? insertedData.message: '';
+    if(!insertedData.error) this.sendEmail(insertedData[0].name, insertedData[0].email, insertedData[0].id);
+    this.tname = !insertedData.error ? insertedData[0].name : '';
+    this.id = !insertedData.error ? insertedData[0].id : '';
+    this.showSucess = !insertedData.error;
+    this.requestUpdate();
   }
 }
 

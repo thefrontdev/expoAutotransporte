@@ -115,8 +115,10 @@ class Home extends LitElement {
             font-size: 1rem;
             font-family: 'Roboto', sans-serif;
             font-weight: 400;
-            line-height: 2;
             order: 1;
+            line-height: 2;
+            text-align: justify;
+            text-wrap: wrap balance;
           }
         }
       }
@@ -182,6 +184,9 @@ class Home extends LitElement {
             & p {
               font-family: 'Roboto', sans-serif;
               margin-bottom: 2rem;
+              line-height: 1.5;
+              text-align: justify;
+              text-wrap: wrap balance;
             }
             & a {
               width: max-content;
@@ -314,6 +319,11 @@ class Home extends LitElement {
             }
           }
         }
+        #social {
+          & .container {
+            padding: 0 2rem;
+          }
+        }
         #map {
           padding: 2rem 0;
           & .container {
@@ -389,6 +399,7 @@ class Home extends LitElement {
 
         #speakers {
           & .speakers-content {
+            justify-content: space-around;
             gap: 0.5rem;
           }
         }
@@ -467,7 +478,7 @@ class Home extends LitElement {
         <image-carousel></image-carousel>
         <h3 class="section-title">ORGANIZACIONES</h3>
         <div class="orgs-content">
-          <a href="https://edomex.gob.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/edomex_logo.webp" alt="Estado de México"></a>
+          <a href="http://edomex.gob.mx/secretaria-movilidad-comunicaciones" target="_blank" rel="noopener noreferrer"><img src="/assets/images/edomex_logo.webp" alt="Estado de México"></a>
           <a href="https://centrodeconvenciones.edomex.gob.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/convenciones_logo.webp" alt="Centrod de Convenciones Edomex"></a>
         </div>
       </main>
@@ -492,9 +503,6 @@ class Home extends LitElement {
     
     <section id="social">
       <main class="container">
-        <h2 class="section-title">
-          SÍGUENOS EN REDES SOCIALES
-        </h2>
         <div class="social-media-content">
           <social-media name="TikTok" url="https://www.tiktok.com/@expoautotransporte"></social-media>
           <social-media name="Facebook" url="https://www.facebook.com/ExpoAutotransporte"></social-media>

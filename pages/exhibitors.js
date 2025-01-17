@@ -25,6 +25,11 @@ class Exhibitors extends LitElement {
             color: #0064d5;
             text-align: center;
           }
+          & p {
+            line-height: 1.5;
+            text-align: justify;
+            text-wrap: wrap balance;
+          }
           & .buttons {
             text-align: center;
             & a {

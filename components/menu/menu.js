@@ -201,7 +201,6 @@ class Menu extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    console.log(innerWidth);
     this.menuVisible = (innerWidth < 480) ? false : true;
 
     window.addEventListener('resize', () => {
@@ -211,7 +210,6 @@ class Menu extends LitElement {
 
     window.addEventListener('scroll', () => {
       this.scroll = window.scrollY > 50;
-      console.log(this.scroll);
       this.requestUpdate();
     });
   }
