@@ -85,6 +85,9 @@ class EventRegistrationForm extends LitElement {
       & p {
         margin: 1rem 0;
       }
+      & .button {
+        margin-top: 1rem;
+      }
     }
 
     @media (500px < width < 1024px){
