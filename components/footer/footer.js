@@ -170,7 +170,7 @@ class FooterComponent extends LitElement {
         </div>
         <div>© 2025 Expo Autotransporte. Todos los derechos reservados.</div>
         <div>
-          <a href="/privacidad" style="color: white; text-decoration: none;">Politica de Privacidad</a>
+          <a href="#" style="color: white; text-decoration: none;">Politica de Privacidad</a>
         </div>
       </div>
     `;

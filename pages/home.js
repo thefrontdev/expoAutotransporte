@@ -170,7 +170,7 @@ class Home extends LitElement {
       
       #visitors {
         background: #fafafa;
-        background: url('/assets/images/visitantes.webp') no-repeat top left/contain;
+        background: url('/assets/images/visitantes.webp') no-repeat center left/48%;
         & .section-title {
           color: #0064d5;
         }
@@ -491,7 +491,11 @@ class Home extends LitElement {
             VISITANTES
           </h2>
           <p>
-            Expo Autotransporte te brinda la oportunidad única de descubrir las últimas innovaciones que están transformando la industria, desde tecnología avanzada hasta soluciones sustentables que impulsan un futuro más eficiente y ecológico. Participa en conferencias con líderes del sector, conoce de primera mano productos y servicios de vanguardia diseñados para llevar tu negocio al siguiente nivel. Además, conecta con profesionales, proveedores y aliados estratégicos, ampliando tu red de contactos y generando oportunidades de crecimiento. <br> 
+            Expo Autotransporte te brinda la oportunidad única de descubrir las últimas innovaciones que están transformando la industria, desde tecnología avanzada hasta soluciones sustentables que impulsan un futuro más eficiente y ecológico. 
+            <br>
+            Participa en conferencias con líderes del sector, conoce de primera mano productos y servicios de vanguardia diseñados para llevar tu negocio al siguiente nivel. 
+            <br>
+            Además, conecta con profesionales, proveedores y aliados estratégicos, ampliando tu red de contactos y generando oportunidades de crecimiento. <br><br>
             ¡No te pierdas el evento que define el rumbo del autotransporte!
           </p>
           <a href="/registro-visitantes" class="button">

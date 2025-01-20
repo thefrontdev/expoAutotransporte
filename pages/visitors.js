@@ -102,8 +102,12 @@ class Visitors extends LitElement {
         <div class="content">
           <h1>¿TE GUSTARÍA PARTICIPAR?</h1>
           <p>
-            Expo Autotransporte te brinda la oportunidad única de descubrir las últimas innovaciones que están transformando la industria, desde tecnología avanzada hasta soluciones sustentables que impulsan un futuro más eficiente y ecológico. Participa en conferencias con líderes del sector, conoce de primera mano productos y servicios de vanguardia diseñados para llevar tu negocio al siguiente nivel. Además, conecta con profesionales, proveedores y aliados estratégicos, ampliando tu red de contactos y generando oportunidades de crecimiento. 
+            Expo Autotransporte te brinda la oportunidad única de descubrir las últimas innovaciones que están transformando la industria, desde tecnología avanzada hasta soluciones sustentables que impulsan un futuro más eficiente y ecológico. 
             <br>
+            Participa en conferencias con líderes del sector, conoce de primera mano productos y servicios de vanguardia diseñados para llevar tu negocio al siguiente nivel. 
+            <br>
+            Además, conecta con profesionales, proveedores y aliados estratégicos, ampliando tu red de contactos y generando oportunidades de crecimiento. 
+            <br><br>
             ¡No te pierdas el evento que define el rumbo del autotransporte! 
           </p>
           <div class="links">
