@@ -508,10 +508,10 @@ class Home extends LitElement {
     <section id="social">
       <main class="container">
         <div class="social-media-content">
-          <social-media name="TikTok" url="https://www.tiktok.com/@expoautotransporte"></social-media>
-          <social-media name="Facebook" url="https://www.facebook.com/ExpoAutotransporte"></social-media>
-          <social-media name="Instagram" url="https://www.instagram.com/expoautotransporte/"></social-media>
-          <social-media name="YouTube" url="https://www.instagram.com/expoautotransporte/"></social-media>
+          <social-media name="TikTok" url="https://www.tiktok.com/@expoautotransportetoluca"></social-media>
+          <social-media name="Facebook" url="https://www.facebook.com/expoautotransportetoluca2025"></social-media>
+          <social-media name="Instagram" url="https://www.instagram.com/expoautotransportetoluca2025"></social-media>
+          <social-media name="YouTube" url="https://www.youtube.com/@ExpoAutotransporteToluca2025"></social-media>
         </div>
       </main>
     </section>
