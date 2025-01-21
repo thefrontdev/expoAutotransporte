@@ -235,6 +235,7 @@ class Menu extends LitElement {
           <a href="/expositores">Expositor</a>
           <a href="/visitantes">Visitante</a>
           <a href="/prensa">Prensa</a>
+          <a href="/asistencia">Asistencia</a>
         </div>
       </div>
       <div id="nav-items-mobile" role="navigation">
@@ -242,6 +243,7 @@ class Menu extends LitElement {
         <a href="/expositores">Expositor</a>
         <a href="/visitantes">Visitante</a>
         <a href="/prensa">Prensa</a>
+        <a href="/asistencia">Asistencia</a>
       </div>
     </nav>
     `;
