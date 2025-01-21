@@ -92,7 +92,7 @@ class RegisterAttendance extends LitElement {
       qrcode.decode();
     } catch (e) {
       if (this.readIterations < 50) {
-        this.readIterations++;
+        this.readIterations++; 
         setTimeout(() => this.scan(), 300);
       }
       else {
@@ -131,7 +131,7 @@ class RegisterAttendance extends LitElement {
         </div>
         <div id="message" hidden="">
           <h1>Se ha registrado la asistencia</h1>
-          <a class="button primary">Regresar al inicio</a>
+          <a href="/" class="button primary">Regresar al inicio</a>
         </div>
       </div>
     `;
