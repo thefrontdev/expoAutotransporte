@@ -33,7 +33,7 @@ class App extends LitElement {
       { path: '/expositores', component: 'exhibitors-page'},
       { path: '/visitantes', component: 'visitors-page' },
       { path: '/prensa', component: 'press-page' },
-      { path: '/registro-visitantes', component: 'visitors-registration' },
+      { path: '/registro-visitantes', component: 'visitors-registry' },
       { path: '/asistencia', component: 'register-attendance' },
       { path: '(.*)', redirect: '/' }, // Redirige cualquier ruta desconocida a la raíz
     ]);

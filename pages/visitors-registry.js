@@ -110,11 +110,71 @@ class EventRegistrationForm extends LitElement {
 
   constructor() {
     super();
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
     this.showForm = true;
     this.showSucess = false;
     this.showError = false;
     this.name = '';
     this.id = '';
+  }
+
+  sendEmail(name, email, id) {
+    const templateParams = {
+      to_name: name,
+      to_email: email,
+      message: '¡Gracias por registrarte en la Expo Autotransporte! Estamos emocionados de contar contigo en este gran evento, donde exploraremos lo último en tecnología, innovación y tendencias del autotransporte.\n Para agilizar tu acceso el día del evento, por favor guarda y presenta el código QR adjunto. Este código es tu pase personal y será necesario para el ingreso.',
+      id,
+    };
+
+    emailjs.init({
+      publicKey: 'Qegkd8YnDmsyZ1VwZ',
+      limitRate: {
+        id: 'app',
+        throttle: 5000,
+      },
+    });
+
+    emailjs.send('ser_expo_autotransportes', 'template_expo_auto', templateParams).then(
+      (response) => {
+        console.log("Correo enviado", response.status, response.text);
+      },
+      (error) => {
+        console.log('FAILED...', error);
+      },
+    );
+  }
+
+  async _handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      phone: formData.get('tel'),
+      company: formData.get('company'),
+      position: formData.get('position'),
+      address: formData.get('address'),
+      postalCode: formData.get('cp'),
+      state: formData.get('state'),
+      municipality: formData.get('municipality'),
+      neighborhood: formData.get('neighborhood'),
+      country: formData.get('country'),
+    };
+    const db = new DB();
+    const insertedData = await db.insertData(data);
+    console.log(insertedData);
+    this.showForm = false;
+    this.showError = insertedData.error;
+    this.messageError = insertedData.error ? insertedData.message: '';
+    if(!insertedData.error) this.sendEmail(insertedData[0].name, insertedData[0].email, insertedData[0].id);
+    this.tname = !insertedData.error ? insertedData[0].name : '';
+    this.id = !insertedData.error ? insertedData[0].id : '';
+    this.showSucess = !insertedData.error;
+    this.requestUpdate();
+    return 
   }
 
   render() {
@@ -204,61 +264,6 @@ class EventRegistrationForm extends LitElement {
     </main>
     `;
   }
-
-  sendEmail(name, email, id) {
-    const templateParams = {
-      to_name: name,
-      to_email: email,
-      message: '¡Gracias por registrarte en la Expo Autotransporte! Estamos emocionados de contar contigo en este gran evento, donde exploraremos lo último en tecnología, innovación y tendencias del autotransporte.\n Para agilizar tu acceso el día del evento, por favor guarda y presenta el código QR adjunto. Este código es tu pase personal y será necesario para el ingreso.',
-      id,
-    };
-
-    emailjs.init({
-      publicKey: 'Qegkd8YnDmsyZ1VwZ',
-      limitRate: {
-        id: 'app',
-        throttle: 5000,
-      },
-    });
-
-    emailjs.send('ser_expo_autotransportes', 'template_expo_auto', templateParams).then(
-      (response) => {
-        console.log("Correo enviado", response.status, response.text);
-      },
-      (error) => {
-        console.log('FAILED...', error);
-      },
-    );
-  }
-
-  async _handleSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = {
-      name: formData.get('name'),
-      email: formData.get('email'),
-      phone: formData.get('tel'),
-      company: formData.get('company'),
-      position: formData.get('position'),
-      address: formData.get('address'),
-      postalCode: formData.get('cp'),
-      state: formData.get('state'),
-      municipality: formData.get('municipality'),
-      neighborhood: formData.get('neighborhood'),
-      country: formData.get('country'),
-    };
-    const db = new DB();
-    const insertedData = await db.insertData(data);
-    console.log(insertedData);
-    this.showForm = false;
-    this.showError = insertedData.error;
-    this.messageError = insertedData.error ? insertedData.message: '';
-    if(!insertedData.error) this.sendEmail(insertedData[0].name, insertedData[0].email, insertedData[0].id);
-    this.tname = !insertedData.error ? insertedData[0].name : '';
-    this.id = !insertedData.error ? insertedData[0].id : '';
-    this.showSucess = !insertedData.error;
-    this.requestUpdate();
-  }
 }
 
-customElements.define('visitors-registration', EventRegistrationForm);
+customElements.define('visitors-registry', EventRegistrationForm);
