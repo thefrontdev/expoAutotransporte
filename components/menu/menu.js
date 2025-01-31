@@ -223,7 +223,7 @@ class Menu extends LitElement {
     return html`
     <nav role="navigation" class="${this.scroll ? 'scroll' : ''}">
       <div class="nav-container">
-        <a href="/" id="logo">
+        <a href="#inicio" id="logo">
           <img src="/assets/images/logo_color.webp" alt="Logo" height="40" width="136">
         </a>
         <input type="checkbox">
@@ -231,19 +231,17 @@ class Menu extends LitElement {
           <span></span>
         </div>
         <div id="nav-items" role="navigation">
-          <a href="/">Inicio</a>
-          <a href="/expositores">Expositor</a>
-          <a href="/visitantes">Visitante</a>
-          <a href="/prensa">Prensa</a>
-          <a href="/asistencia">Asistencia</a>
+          <a href="#inicio">Inicio</a>
+          <a href="#expositores">Expositor</a>
+          <a href="#visitantes">Visitante</a>
+          <a href="#prensa">Prensa</a>
         </div>
       </div>
       <div id="nav-items-mobile" role="navigation">
-        <a href="/">Inicio</a>
-        <a href="/expositores">Expositor</a>
-        <a href="/visitantes">Visitante</a>
-        <a href="/prensa">Prensa</a>
-        <a href="/asistencia">Asistencia</a>
+        <a href="#inicio">Inicio</a>
+        <a href="#expositores">Expositor</a>
+        <a href="#visitantes">Visitante</a>
+        <a href="#prensa">Prensa</a>
       </div>
     </nav>
     `;

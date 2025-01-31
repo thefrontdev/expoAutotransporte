@@ -1,5 +1,5 @@
 import { css, html, LitElement } from './../assets/js/lit-core.min.js';
-import {Router} from 'https://esm.run/@vaadin/router';
+
 import '/components/menu/menu.js';
 import '/components/footer/footer.js';
 import '/pages/home.js';
@@ -8,6 +8,7 @@ import '/pages/visitors.js';
 import '/pages/press.js';
 import '/pages/visitors-registry.js';
 import '/pages/register-attendance.js';
+import '/pages/attendees.js';
 
 import { styles } from './../assets/styles/styles.js';
 
@@ -21,23 +22,41 @@ class App extends LitElement {
     `
 ];
 
-  constructor() {
-    super();
+changeView(hash) {
+  const outlet = this.shadowRoot.querySelector('#router-outlet');
+  console.log(outlet);
+  let selectSection = '';
+  const sections = {
+    inicio: 'home',
+    expositores: 'exhibitors', 
+    visitantes: 'visitors', 
+    prensa: 'press', 
+    'registro-visitantes': 'visitors-registry', 
+    registros: 'attendees'
+  };
+  if (hash.includes('?')) {
+    selectSection='register-attendance';
   }
+  else {
+    selectSection =sections[hash.substring(1)];
+  }
+  const page = selectSection+'-page';
+  console.log(page);
+  outlet.innerHTML = `<${page}></${page}>`;
+}
 
-  firstUpdated() {
-    const outlet = this.shadowRoot.querySelector('#router-outlet');
-    const router = new Router(outlet);
-    router.setRoutes([
-      { path: '/', component: 'home-page' },
-      { path: '/expositores', component: 'exhibitors-page'},
-      { path: '/visitantes', component: 'visitors-page' },
-      { path: '/prensa', component: 'press-page' },
-      { path: '/registro-visitantes', component: 'visitors-registry' },
-      { path: '/asistencia', component: 'register-attendance' },
-      { path: '(.*)', redirect: '/' }, // Redirige cualquier ruta desconocida a la raíz
-    ]);
-  }
+firstUpdated() {
+  this._hash = window.location.hash || '#inicio';
+  this.changeView(this._hash);
+}
+
+connectedCallback() {
+  super.connectedCallback();
+  console.log(window.location);
+  const hash = window.location.hash || '#inicio';
+  console.log(hash);
+  window.addEventListener('popstate', (e) => this.changeView(e.target.location.hash));
+}
 
   render() {
     return html`

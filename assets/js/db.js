@@ -9,7 +9,8 @@ export class DB {
     const supabase = createClient(DB.dbURL, DB.AnonKey);
     const {data, error} = await supabase
     .from('visitors')
-    .select();
+    .select()
+    .order('id', { ascending: true });
 
     if (!error) {
       console.log(data);
@@ -21,8 +22,21 @@ export class DB {
     }
   }
 
-  async getDataById() {
+  async getDataById(id) {
     const supabase = createClient(DB.dbURL, DB.AnonKey);
+    const {data, error} = await supabase
+    .from('visitors')
+    .select()
+    .eq('id', id);
+
+    if (!error) {
+      console.log(data);
+      return data;
+    }
+    else {
+      console.log(error(error));
+      return {error: true, message: "Hubo un problema al obtener la información del visitante."}
+    }
   }
 
   async insertData(info) {
@@ -49,13 +63,59 @@ export class DB {
       return data;
     }
     else {
-      console.error(error);
+      console.log(error(error));
       return {error: true, message: "Hubo un problema al registrarte, por favor inténtalo más tarde."}
     }
   }
 
-  async insertVisit() {
+  async insertVisit(id, day) {
     const supabase = createClient(DB.dbURL, DB.AnonKey);
+    console.log(id, day);
+    if (day === 1) {
+      const { data, error } = await supabase
+      .from('visitors')
+      .update({ dia1: true })
+      .eq('id', id)
+      .select();
+      if (!error) {
+        console.log(data);
+        return data;
+      }
+      else {
+        console.error(error);
+        return {error: true, message: "Hubo un problema al registrar la asistencia, por favor inténtalo más tarde."}
+      }
+    }
+    else if (day === 2) {
+      const { data, error } = await supabase
+      .from('visits')
+      .update({ dia2: true })
+      // .eq('id', id);
+      .match({ id: id })
+      if (!error) {
+        console.log(data);
+        return data;
+      }
+      else {
+        return {error: true, message: "Hubo un problema al registrar la asistencia, por favor inténtalo más tarde."}
+      }
+    }
+    else  if (day === 3) {
+      const { data, error } = await supabase
+      .from('visits')
+      .update({ dia3: true })
+      .eq('id', id);
+      if (!error) {
+        console.log(data);
+        return data;
+      }
+      else {
+        return {error: true, message: "Hubo un problema al registrar la asistencia, por favor inténtalo más tarde."}
+      }
+    }
+    else {
+      return {error: true, message: "Hubo un problema al registrar la asistencia, por favor inténtalo más tarde."}
+    }
   }
 
 }

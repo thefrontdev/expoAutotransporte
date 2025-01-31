@@ -246,10 +246,10 @@ class EventRegistrationForm extends LitElement {
           <br>
           Para agilizar tu acceso el día del evento, por favor guarda y presenta el código QR que se encuentra debajo. Este código es tu pase personal y será necesario para el ingreso.
           </p>
-          <a href="https://api.qrserver.com/v1/create-qr-code/?data=visitante-${this.id}-expoautotransporte" download="QR.png">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?data=visitante-${this.id}-expoautotransporte" alt="Código QR" width="200px" height="200px">
+          <a href="https://api.qrserver.com/v1/create-qr-code/?data=https://expoautotransporte.com#asistencia?${this.id}" download="QR.png">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://expoautotransporte.com#asistencia?${this.id}" alt="Código QR" width="200px" height="200px">
           </a>
-          <a href="/" class="button">Regresar al inicio</a>
+          <a href="#inicio" class="button">Regresar al inicio</a>
       </div>
       
       <div id="error" class="form-container ${!this.showError ? 'hidden' : ''}">
@@ -258,7 +258,7 @@ class EventRegistrationForm extends LitElement {
         <p>
           ${this.messageError}
         <p>
-        <a href="/" class="button">Regresar al inicio</a>
+        <a href="#inicio" class="button">Regresar al inicio</a>
       </div>
 
     </main>
@@ -266,4 +266,4 @@ class EventRegistrationForm extends LitElement {
   }
 }
 
-customElements.define('visitors-registry', EventRegistrationForm);
+customElements.define('visitors-registry-page', EventRegistrationForm);

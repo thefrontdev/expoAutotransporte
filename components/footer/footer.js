@@ -110,7 +110,7 @@ class FooterComponent extends LitElement {
   render() {
     return html`
       <div class="footer-content">
-        <a href="/"><img src="/assets/images/logo_about.webp" alt="Expo Autotransporte"></a>
+        <a href="#inicio"><img src="/assets/images/logo_about.webp" alt="Expo Autotransporte"></a>
         <div class="footer-contact">
           <p>Contáctanos</p>
           <ul>

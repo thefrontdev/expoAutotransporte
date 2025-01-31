@@ -438,7 +438,7 @@ class Home extends LitElement {
           <span id="convenciones-logo"></span>
           Centro de Convenciones del Estado de México
         </a>
-        <a href="/expositores" class="button primary">REGISTRA TU STAND AQUÍ</a>
+        <a href="#expositores" class="button primary">REGISTRA TU STAND AQUÍ</a>
         <p>FALTAN</p>
         <countdown-timer targetDate="2025/03/14 09:00:00"></countdown-timer>
       </main>
@@ -498,7 +498,7 @@ class Home extends LitElement {
             Además, conecta con profesionales, proveedores y aliados estratégicos, ampliando tu red de contactos y generando oportunidades de crecimiento. <br><br>
             ¡No te pierdas el evento que define el rumbo del autotransporte!
           </p>
-          <a href="/registro-visitantes" class="button">
+          <a href="#registro-visitantes" class="button">
             REGÍSTRATE AQUÍ
           </a>
         </div>
