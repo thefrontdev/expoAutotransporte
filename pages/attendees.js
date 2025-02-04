@@ -25,7 +25,8 @@ class Attendees extends LitElement {
 
       .table-container {
         width: 100%;
-        overflow-x: auto;
+        max-height: 80vh;
+        overflow: auto;
       }
 
       table {
@@ -36,7 +37,9 @@ class Attendees extends LitElement {
           border: 1px solid #ddd;
           padding: 8px;
         }
-        & th {
+        & thead {
+          position: sticky;
+          top: 0;
           background-color: #f2f2f2;
         }
       }
