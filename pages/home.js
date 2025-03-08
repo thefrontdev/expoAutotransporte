@@ -466,7 +466,7 @@ class Home extends LitElement {
           <speaker-item name="Cesar" position="" imageURL="/assets/images/Cesar.png"></speaker-item>
           <speaker-item name="David" position="" imageURL="/assets/images/David.png"></speaker-item>
           <speaker-item name="José María" position="" imageURL="/assets/images/JoseMaria.png"></speaker-item>
-          <speaker-item name="Rendón" position="" imageURL="/assets/images/Rendon.png"></speaker-item>
+          <speaker-item name="Ing. Rendón" position="" imageURL="/assets/images/Rendon.png"></speaker-item>
         </div>
       </main>
     </section>
