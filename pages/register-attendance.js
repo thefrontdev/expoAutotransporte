@@ -217,7 +217,7 @@ class RegisterAttendance extends LitElement {
     if (this.user === predefinedUser && this.password === predefinedPassword) {
       let today = new Date();
       let day = 0;
-      if (today.getMonth() === 3) {
+      if ((today.getMonth() + 1) === 3) {
         switch (today.getDate()) {
           case 14:
             day = 1;
