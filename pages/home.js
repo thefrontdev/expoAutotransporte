@@ -471,7 +471,7 @@ class Home extends LitElement {
       </main>
     </section>
     
-    <section id="sponsors">
+    <!-- section id="sponsors">
       <main class="container">
         <h2 class="section-title">PATROCINADORES</h2>
         <div class="sponsors-content">
@@ -486,7 +486,7 @@ class Home extends LitElement {
           <a href="https://centrodeconvenciones.edomex.gob.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/convenciones_logo.webp" alt="Centrod de Convenciones Edomex"></a>
         </div>
       </main>
-    </section>
+    </section -->
     
     <section id="visitors">
       <main class="container">
