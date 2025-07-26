@@ -115,7 +115,7 @@ class Visitors extends LitElement {
             <a href="#"><img src="/assets/images/time-limit.webp" alt="calendar-icon"> Programa del evento</a>
           </div>
 
-          <a href="#registro-visitantes" class="button primary">REGISTRATE AQUÍ</a>
+          <!--a href="#registro-visitantes" class="button primary">REGISTRATE AQUÍ</a-->
         </div>
       </main>
     `;

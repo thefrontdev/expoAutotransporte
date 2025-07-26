@@ -430,8 +430,8 @@ class Home extends LitElement {
     <section id="inicio">
       <main class="container">
         <hgroup>
-          <p id="edition">1 <span>er</span></p>
-          <span id="year">2025</span>
+          <p id="edition">2 <span>da</span></p>
+          <span id="year">2026</span>
           <h1 id="main-title">EXPO AUTOTRANSPORTE</h1>
         </hgroup>
         <a href="https://maps.app.goo.gl/mZyKYYby8h1VrvNf9" target="_blank" rel="noopener noreferrer" id="location">
@@ -440,7 +440,7 @@ class Home extends LitElement {
         </a>
         <a href="#expositores" class="button primary">REGISTRA TU STAND AQUÍ</a>
         <p>FALTAN</p>
-        <countdown-timer targetDate="2025/03/14 09:00:00"></countdown-timer>
+        <countdown-timer targetDate="2026/03/04 09:00:00"></countdown-timer>
       </main>
     </section>
     
@@ -448,15 +448,15 @@ class Home extends LitElement {
       <main class="container">
         <h2 class="section-title">CONDUCIENDO AL FUTURO DEL AUTOTRANSPORTE</h2>
         <div class="content">
-          <img src="/assets/images/logo_about.webp" alt="EXPO AUTOTRANSPORTE 2025">
+          <img src="/assets/images/logo_about.webp" alt="EXPO AUTOTRANSPORTE 2026">
           <p>
-            La EXPO AUTOTRANSPORTE 2025 reúne a empresarios, microempresarios, proveedores, transportistas y entusiastas,  conectando a la industria para avanzar hacia un futuro más eficiente y sostenible. <br>
+            La EXPO AUTOTRANSPORTE 2026 reúne a empresarios, microempresarios, proveedores, transportistas y entusiastas,  conectando a la industria para avanzar hacia un futuro más eficiente y sostenible. <br>
             Descubre las últimas innovaciones tecnológicas, participa en conferencias y paneles con expertos, y establece valiosas conexiones que impulsarán el autotransporte en México.</p>
           </div>
         </main>
     </section>
     
-    <section id="speakers">
+    <!--section id="speakers">
       <main class="container">
         <h2 class="section-title">CONOCE A NUESTROS CONFERENCISTAS</h2>
         <div class="speakers-content">
@@ -469,22 +469,22 @@ class Home extends LitElement {
           <speaker-item name="Ing. Rendón" position="" imageURL="/assets/images/Rendon.png"></speaker-item>
         </div>
       </main>
-    </section>
+    </section-->
     
-    <!-- section id="sponsors">
+    <section id="sponsors">
       <main class="container">
-        <h2 class="section-title">PATROCINADORES</h2>
-        <div class="sponsors-content">
+        <!--h2 class="section-title">PATROCINADORES</h2>
+        <div-- class="sponsors-content">
           <a href="https://www.grupotab.com.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/tab_logo.webp" alt="Grupo TAB"></a>
           <a href="https://cima-aviacion.com.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/cima_logo.webp" alt="CIMA Aviación"></a>
-        </div>
+        </div-->
         <h3 class="section-title">NUESTROS ALIADOS EN EL CAMINO</h3>
         <image-carousel></image-carousel>
-        <h3 class="section-title">ORGANIZACIONES</h3>
-        <div class="orgs-content">
+        <!--h3 class="section-title">ORGANIZACIONES</h3>
+        <div-- class="orgs-content">
           <a href="http://edomex.gob.mx/secretaria-movilidad-comunicaciones" target="_blank" rel="noopener noreferrer"><img src="/assets/images/edomex_logo.webp" alt="Estado de México"></a>
           <a href="https://centrodeconvenciones.edomex.gob.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/convenciones_logo.webp" alt="Centrod de Convenciones Edomex"></a>
-        </div>
+        </div-->
       </main>
     </section -->
     
@@ -496,15 +496,15 @@ class Home extends LitElement {
           </h2>
           <p>
             Expo Autotransporte te brinda la oportunidad única de descubrir las últimas innovaciones que están transformando la industria, desde tecnología avanzada hasta soluciones sustentables que impulsan un futuro más eficiente y ecológico. 
-            <br>
+            <br><br>
             Participa en conferencias con líderes del sector, conoce de primera mano productos y servicios de vanguardia diseñados para llevar tu negocio al siguiente nivel. 
             <br>
             Además, conecta con profesionales, proveedores y aliados estratégicos, ampliando tu red de contactos y generando oportunidades de crecimiento. <br><br>
             ¡No te pierdas el evento que define el rumbo del autotransporte!
           </p>
-          <a href="#registro-visitantes" class="button">
+          <!--a href="#registro-visitantes" class="button">
             REGÍSTRATE AQUÍ
-          </a>
+          </a-->
         </div>
       </main>
     </section>
