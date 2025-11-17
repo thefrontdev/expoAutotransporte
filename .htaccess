@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.expoautotransporte\.com$ [NC]
+RewriteRule ^(.*)$ https://expoautotransporte.com/$1 [R=301,L]
