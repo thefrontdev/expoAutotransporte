@@ -135,7 +135,7 @@ class PressPage extends LitElement {
             Para registrarte comunícate con nosotros vía:
           </p>
           <div class="buttons">
-            <a href="mailto:breyhamrodriguez@expoautotransporte.com?subject=Prensa%20en%20ExpoAutotransporte%202025&body=Quiero%20formar%20parte%20de%20la%20prensa%20para%20la%20ExpoAutotransporte%202025" class="button">CORREO ELECTRÓNICO</a>
+            <a href="mailto:toluca2026@expoautotransporte.com.mx?subject=Prensa%20en%20ExpoAutotransporte%202025&body=Quiero%20formar%20parte%20de%20la%20prensa%20para%20la%20ExpoAutotransporte%202025" class="button">CORREO ELECTRÓNICO</a>
             <a href="https://wa.link/85l72p" class="button" target="_blank" rel="noopener noreferrer">
               WHATSAPP
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 50 50" fill="#fafafa">

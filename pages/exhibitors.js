@@ -114,7 +114,8 @@ class Exhibitors extends LitElement {
             Para más información y detalles sobre la contratación de espacios, contáctanos vía: 
           </p>
           <div class="buttons">
-            <a href="mailto:breyhamrodriguez@expoautotransporte.com?subject=Expositor%20en%20ExpoAutotransporte%202025&body=Quiero%20formar%20parte%20de%20los%20expositores%20para%20la%20ExpoAutotransporte%202025" class="button">CORREO ELECTRÓNICO</a>
+          <!--a class="button" href="#registro-expositores" rel="noopener noreferrer">REGISTRATE AQUÍ</!--a-->
+            <!--a href="mailto:breyhamrodriguez@expoautotransporte.com?subject=Expositor%20en%20ExpoAutotransporte%202025&body=Quiero%20formar%20parte%20de%20los%20expositores%20para%20la%20ExpoAutotransporte%202025" class="button">CORREO ELECTRÓNICO</!--a-->
             <a href="https://wa.link/kbvk8q" class="button" target="_blank" rel="noopener noreferrer">
               WHATSAPP
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="16" height="16" viewBox="0 0 50 50" fill="#fafafa">
@@ -124,6 +125,7 @@ class Exhibitors extends LitElement {
           </div>
           <a download="/" target="_blank"><img src="/assets/images/documento-icon.svg" alt="icono de documento"> Descarga la información necesaria</a>
         </div>
+        <exhibitors-registry-page></exhibitors-registry-page>
       </main>
     `;
   }

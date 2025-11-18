@@ -473,13 +473,14 @@ class Home extends LitElement {
     
     <section id="sponsors">
       <main class="container">
-        <!--h2 class="section-title">PATROCINADORES</h2>
-        <div-- class="sponsors-content">
+        <h2 class="section-title">MARCAS QUE NOS MANTIENEN EN MOVIMIENTO</h2>
+        <image-carousel type="sponsors"></image-carousel>
+        <!--div-- class="sponsors-content">
           <a href="https://www.grupotab.com.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/tab_logo.webp" alt="Grupo TAB"></a>
           <a href="https://cima-aviacion.com.mx/" target="_blank" rel="noopener noreferrer"><img src="/assets/images/cima_logo.webp" alt="CIMA Aviación"></a>
-        </div-->
+        </!--div-->
         <h3 class="section-title">NUESTROS ALIADOS EN EL CAMINO</h3>
-        <image-carousel></image-carousel>
+        <image-carousel type="partners"></image-carousel>
         <!--h3 class="section-title">ORGANIZACIONES</h3>
         <div-- class="orgs-content">
           <a href="http://edomex.gob.mx/secretaria-movilidad-comunicaciones" target="_blank" rel="noopener noreferrer"><img src="/assets/images/edomex_logo.webp" alt="Estado de México"></a>

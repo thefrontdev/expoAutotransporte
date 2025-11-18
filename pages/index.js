@@ -30,7 +30,8 @@ changeView(hash) {
     inicio: 'home',
     expositores: 'exhibitors', 
     visitantes: 'visitors', 
-    prensa: 'press', 
+    prensa: 'press',
+    'registro-expositores': 'exhibitors-registry',
     'registro-visitantes': 'visitors-registry', 
     registros: 'attendees'
   };

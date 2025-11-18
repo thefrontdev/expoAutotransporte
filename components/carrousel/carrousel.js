@@ -2,7 +2,10 @@ import { LitElement, html, css } from '/assets/js/lit-core.min.js';
 
 class ImageCarousel extends LitElement {
   static properties = {
-    images: { type: Array }
+    type: { type: String },
+    images: { type: Array },
+    sponsors: { type: Array },
+    partners: { type: Array },
   };
 
   static styles = css`
@@ -18,7 +21,18 @@ class ImageCarousel extends LitElement {
         display: flex;
         align-items: center;
         gap: 4rem;
-        animation: slide 40s linear infinite;
+        animation: slide 60s linear infinite;
+        &.sponsors {
+          height: 8rem;
+          animation: slide 40s linear infinite;
+          & img {
+            height: 6rem;
+          }
+        }
+        & .remove-bg {
+          filter: brightness(1);
+          mix-blend-mode: multiply;
+        }
         & img {
           height: 4rem;
           width: auto;
@@ -47,42 +61,44 @@ class ImageCarousel extends LitElement {
 
   constructor() {
     super();
-    this.images = [
-      '/assets/images/partners/adtec.png',
-      '/assets/images/partners/axone.png',
-      '/assets/images/partners/bernal.png',
-      '/assets/images/partners/bikla.png',
-      '/assets/images/partners/calorheat.png',
-      '/assets/images/partners/centraldeturbos.png',
-      '/assets/images/partners/corvus.png',
-      '/assets/images/partners/deltex.png',
-      '/assets/images/partners/dfac.png',
-      '/assets/images/partners/dieselprotection.png',
-      '/assets/images/partners/dieselgroup.png',
-      '/assets/images/partners/elarbol.png',
-      '/assets/images/partners/facturoporti.png',
-      '/assets/images/partners/faw.png',
-      '/assets/images/partners/frenelsa.png',
-      '/assets/images/partners/inyecdieseltarget.png',
-      '/assets/images/partners/leon.png',
-      '/assets/images/partners/mdescalado.png',
-      '/assets/images/partners/motoradiesel.png',
-      '/assets/images/partners/movilidad3.png',
-      '/assets/images/partners/mucavi.png',
-      '/assets/images/partners/nissan.png',
-      '/assets/images/partners/ous.png',
-      '/assets/images/partners/rivera.png',
-      '/assets/images/partners/sama.png',
-      '/assets/images/partners/segu.png',
-      '/assets/images/partners/sidpower.png',
-      '/assets/images/partners/sinditol.png',
-      '/assets/images/partners/turbolideres.png',
-      '/assets/images/partners/zapata.png',
+    this.type = '';
+    this.images = [];
+    this.sponsors = [
+      '/assets/images/sponsors/Benral.jpg',
+      '/assets/images/sponsors/CANACAR.jpg',
+      '/assets/images/sponsors/Deltex.jpg',
+      '/assets/images/sponsors/el-arbol.jpg',
+      '/assets/images/sponsors/mi-conductor.jpg',
+      '/assets/images/sponsors/mobil.jpg',
+      '/assets/images/sponsors/rasa.jpg',
+      '/assets/images/sponsors/tab.jpg',
+    ]; 
+    this.partners = [
+      '/assets/images/partners/atlas-web.jpg',
+      '/assets/images/partners/Camiones-rivera-web.jpg',
+      '/assets/images/partners/cifremex-web.jpg',
+      '/assets/images/partners/cluth-y-frenos-lagger-web.jpg',
+      '/assets/images/partners/cofremex-web.jpg',
+      '/assets/images/partners/corvus.jpg',
+      '/assets/images/partners/disel-vega-web.jpg',
+      '/assets/images/partners/dong-feng-web.jpg',
+      '/assets/images/partners/gm-transport.jpg',
+      '/assets/images/partners/Gohner.jpg',
+      '/assets/images/partners/hangcha-web.jpg',
+      '/assets/images/partners/jemkal-web.jpg',
+      '/assets/images/partners/Logos-AMO.jpg',
+      '/assets/images/partners/precision-diesel-web.jpg',
+      '/assets/images/partners/qualitas.jpg',
+      '/assets/images/partners/sac-web.jpg',
+      '/assets/images/partners/Segu.jpg',
+      '/assets/images/partners/tersit-web.jpg',
+      '/assets/images/partners/zapata-web.jpg',
     ];
     this.currentIndex = 0;
   }
 
   firstUpdated() {
+    this.images = this.type === 'sponsors' ? this.sponsors : this.partners;
     this.startCarousel();
   }
 
@@ -96,12 +112,12 @@ class ImageCarousel extends LitElement {
   render() {
     return html`
       <div class="carousel">
-        <div class="carousel-wrapper">
+        <div class="carousel-wrapper ${this.type}">
           ${this.images.map((image, index) => html`
-              <img src="${image}">
+              <img src="${image}" class="remove-bg">
           `)}
           ${this.images.map((image, index) => html`
-              <img src="${image}">
+              <img src="${image}" class="remove-bg">
           `)}
         </div>
       </div>
