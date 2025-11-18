@@ -87,6 +87,7 @@ class ImageCarousel extends LitElement {
       '/assets/images/partners/hangcha-web.jpg',
       '/assets/images/partners/jemkal-web.jpg',
       '/assets/images/partners/Logos-AMO.jpg',
+      '/assets/images/partners/Nuno-web.jpg',
       '/assets/images/partners/precision-diesel-web.jpg',
       '/assets/images/partners/qualitas.jpg',
       '/assets/images/partners/sac-web.jpg',
