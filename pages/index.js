@@ -20,54 +20,54 @@ class App extends LitElement {
         display: block;
       }
     `
-];
+  ];
 
-changeView(hash) {
-  const outlet = this.shadowRoot.querySelector('#router-outlet');
-  console.log(outlet);
-  let selectSection = '';
-  const sections = {
-    inicio: 'home',
-    expositores: 'exhibitors', 
-    visitantes: 'visitors', 
-    prensa: 'press',
-    'registro-expositores': 'exhibitors-registry',
-    'registro-visitantes': 'visitors-registry', 
-    registros: 'attendees'
-  };
-  if (hash.includes('?')) {
-    selectSection='register-attendance';
+  changeView(hash) {
+    const outlet = this.shadowRoot.querySelector('#router-outlet');
+    let selectSection = '';
+
+    const sections = {
+      inicio: 'home',
+      expositores: 'exhibitors',
+      visitantes: 'visitors',
+      prensa: 'press',
+      'registro-expositores': 'exhibitors-registry',
+      'registro-visitantes': 'visitors-registry',
+      registros: 'attendees'
+    };
+
+    if (hash.includes('?')) {
+      selectSection = 'register-attendance';
+    } else {
+      selectSection = sections[hash.substring(1)] || 'home'; // Fallback
+    }
+
+    const page = `${selectSection}-page`;
+    outlet.innerHTML = `<${page}></${page}>`;
   }
-  else {
-    selectSection =sections[hash.substring(1)];
+
+  firstUpdated() {
+    const hash = window.location.hash || '#inicio';
+    this.changeView(hash);
   }
-  const page = selectSection+'-page';
-  console.log(page);
-  outlet.innerHTML = `<${page}></${page}>`;
-}
 
-firstUpdated() {
-  this._hash = window.location.hash || '#inicio';
-  this.changeView(this._hash);
-}
-
-connectedCallback() {
-  super.connectedCallback();
-  console.log(window.location);
-  const hash = window.location.hash || '#inicio';
-  console.log(hash);
-  window.addEventListener('popstate', (e) => this.changeView(e.target.location.hash));
-}
+  connectedCallback() {
+    super.connectedCallback();
+    window.addEventListener('hashchange', () => {
+      const hash = window.location.hash || '#inicio';
+      this.changeView(hash);
+    });
+  }
 
   render() {
     return html`
-    <header>
-      <expo-menu></expo-menu>
-    </header> 
+      <header>
+        <expo-menu></expo-menu>
+      </header>
       <div id="router-outlet"></div>
-    <footer>
-      <expo-footer></expo-footer>
-    </footer>
+      <footer>
+        <expo-footer></expo-footer>
+      </footer>
     `;
   }
 }
