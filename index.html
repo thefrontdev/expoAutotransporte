@@ -24,6 +24,11 @@
   <title>Expo Autotransporte 2025</title>
   <link rel="icon" href="/favicon.webp" type="image/webp">
   <script type="module" src="/pages/index.js"></script>
+  <script>
+    if (!location.hash) {
+      location.hash = '#inicio';
+    }
+  </script>
   <link rel="stylesheet" href="/assets/styles/main.css">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
