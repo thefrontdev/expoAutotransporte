@@ -38,59 +38,16 @@ export const styles = css`
     padding: 0;
   }
 
-  body {
-    background-color: #fafafa;
-    font-family: 'Acumin', sans-serif;
-  }
-
-
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    width: 100%;
-  }
-
-  .button {
-    background: #0064d5;
-    color: #fafafa;
-    text-transform: uppercase;
-    padding: 0.5rem 1rem;
-    border-radius: 2rem;
-    box-shadow: 0.25rem 0.25rem 0.25rem #0e0e0e80;
-    border: none;
-    cursor: pointer;
-    text-decoration: none;
-    transition: all 0.25s, box-shadow 0.1s;
-    &.primary {
-      font-size: 1.125rem;
-    }
-    &:hover {
-      background: #0075d5;
-      color: #1d3365;
-    }
-    &:active{
-      box-shadow: none;
-    }
-  }
-
-  .section-title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 3rem;
-    text-align: center;
-  }
-
-  @media screen and (max-width: 500px) {
-    .container {
-      padding: 0 1rem;
-    }
-
-    .section-title {
-      font-size: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
+  h2::after {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 2px;
+    background: var(--neon);
+    margin-top: 16px;
+    box-shadow:
+      0 0 10px var(--neon),
+      0 0 30px var(--neon55);
   }
   
 `;

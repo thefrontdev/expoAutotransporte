@@ -1,0 +1,59 @@
+:root {
+  --bg-main: #05070c;
+  --bg-panel: #0b1020;
+  --bg-glass: rgba(14,21,43,0.55);
+
+  --neon: #00f0ff;
+  --neon-blue: #4b7cff;
+  --neon-purple: #7c3aed;
+  --neon-green: #22ff88;
+  --border: #000ffa;
+  --border80: #000ffacc;
+  --border20: #000ffa33;
+
+  --text-main: #eaf2ff;
+  --text-muted: #9aa4c7;
+
+  --radius: 18px;
+  --ease: cubic-bezier(.25,.8,.25,1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0b1020, #05070c 70%);
+  font-family: 'Inter', system-ui;
+  color: var(--text-main);
+}
+
+section {
+  position: relative;
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, transparent, rgba(0,240,255,.04), transparent);
+  pointer-events: none;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 64px);
+}
+h2 {
+  font-size: clamp(32px, 5vw, 48px);
+  &::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--neon-blue);
+    margin-top: 12px;
+    border-radius: 2px;
+  }
+}
