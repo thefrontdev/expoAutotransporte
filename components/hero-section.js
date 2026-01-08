@@ -116,7 +116,7 @@ export class HeroSection extends LitElement {
             <p>Expo Autotransporte Toluca – Hub 360</p>
             <div class="actions">
               <a class="primary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">Registrar marca</a>
-              <button class="secondary">Descargar brochure</button>
+              <a class="secondary" href="/assets/docs/Brochure-Ejecutivo.pdf" download target="_blank" rel="noopener noreferrer">Descargar brochure</a>
             </div>
           </div>
         </section>
