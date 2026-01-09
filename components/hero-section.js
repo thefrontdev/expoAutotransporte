@@ -96,9 +96,11 @@ export class HeroSection extends LitElement {
 
     @media (max-width: 480px) {
       section {
+        width: 100%;
+        box-sizing: border-box;
         padding: 4rem 2.5rem;
         & h1 {
-          font-size: 3rem;
+          font-size: 2.5rem;
         }
         & #background-video {
           height: 100vh
@@ -122,13 +124,11 @@ export class HeroSection extends LitElement {
           <source src="/assets/videos/autotransporteVid.webm" type="video/webm">
         </video>
         <section>
-          <div>
-            <h1>Donde el autotransporte deja de exhibirse<br>y comienza a hacer negocios</h1>
-            <p>Expo Autotransporte Toluca – Hub 360</p>
-            <div class="actions">
-              <a class="primary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">Registrar marca</a>
-              <a class="secondary" href="/assets/docs/Brochure-Ejecutivo.pdf" download target="_blank" rel="noopener noreferrer">Descargar brochure</a>
-            </div>
+          <h1>Donde el autotransporte deja de exhibirse<br>y comienza a hacer negocios</h1>
+          <p>Expo Autotransporte Toluca – Hub 360</p>
+          <div class="actions">
+            <a class="primary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">Registrar marca</a>
+            <a class="secondary" href="/assets/docs/Brochure-Ejecutivo.pdf" download target="_blank" rel="noopener noreferrer">Descargar brochure</a>
           </div>
         </section>
       </div>
