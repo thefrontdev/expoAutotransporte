@@ -60,6 +60,7 @@ export class HeroSection extends LitElement {
       margin-top: 3rem;
       display: flex;
       gap: 20px;
+      height: fit-content;
     }
 
     .primary {
@@ -94,7 +95,7 @@ export class HeroSection extends LitElement {
       transform: translateY(0);
     }
 
-    @media (max-width: 480px) {
+    @media (width <= 480px) {
       section {
         width: 100%;
         box-sizing: border-box;
@@ -102,13 +103,13 @@ export class HeroSection extends LitElement {
         & h1 {
           font-size: 2.5rem;
         }
-        & #background-video {
+        & video {
           height: 100vh
         }
       }
     }
 
-    @media (max-width: 1024px) {
+    @media (1024 >= width > 480px) {
       section {
         grid-template-columns: 1fr;
         padding: 5rem 2.5rem;
