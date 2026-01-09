@@ -86,6 +86,22 @@ export class BentoBenefits extends LitElement {
         backdrop-filter: none;
       }
     }
+    
+    @media (max-width <= 480px) {
+      section {
+        padding: 4rem 2.5rem;
+        & .bento {
+          width: 100%;
+          box-sizing: border-box;
+          flex-flow: column;
+          gap: 1rem;
+
+          & .card {
+            width: 100%;
+          }
+        }
+      }
+    }
   `;
 
   render() {

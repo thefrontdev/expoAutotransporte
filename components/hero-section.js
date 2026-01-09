@@ -53,7 +53,7 @@ export class HeroSection extends LitElement {
         backdrop-filter: blur(0.5rem);
       }
       &.secondary:hover { 
-        box-shadow: 0 0 30px #00f0ff, 0 0 80px #00f0ff55;
+        box-shadow: 0 0 30px var(--border-similar), 0 0 80px #005bfa55;
       }
     }
 
@@ -64,14 +64,14 @@ export class HeroSection extends LitElement {
     }
 
     .primary {
-      background: var(--neon);
-      color: #05070c;
+      background: var(--border);
+      color: #fafafa;
       padding: 1.125rem 2.625rem;
       border-radius: 0.875rem;
       border: none;
       font-weight: 600;
-      border: 1px solid #00f0ff;
-      box-shadow: 0 0 30px #00f0ff, 0 0 80px #00f0ff55;
+      border: 1px solid var(--border-similar);
+      box-shadow: 0 0 30px var(--border-similar), 0 0 80px #005bfa55;
     }
 
     .secondary {
@@ -80,7 +80,7 @@ export class HeroSection extends LitElement {
       color: var(--neon);
       padding: 1.125rem 2.625rem;
       border-radius: 0.875rem;
-      box-shadow: 0 0 18px #00f0ff44;
+      box-shadow: 0 0 18px #005bfa44;
     }
 
     a, button {
@@ -93,6 +93,18 @@ export class HeroSection extends LitElement {
 
     a:active, button:active {
       transform: translateY(0);
+    }
+
+    @media (max-width <= 480px) {
+      section {
+        padding: 4rem 2.5rem;
+        & h1 {
+          font-size: 3rem;
+        }
+        & #background-video {
+          height: 100vh
+        }
+      }
     }
 
     @media (max-width: 1024px) {

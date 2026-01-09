@@ -27,14 +27,15 @@ export class FinalCta extends LitElement {
       margin-top: 40px;
       padding: 22px 54px;
       border-radius: 16px;
-      background: var(--neon);
+      background: var(--border);
+      border: 1px solid var(--border-similar)
       box-shadow:
-        0 0 30px #00f0ff,
-        0 0 80px #00f0ff88;
+        0 0 30px var(--border-similar),
+        0 0 80px #005bfa88;
       transition: transform .25s var(--ease), box-shadow .25s var(--ease);
       border: none;
       text-decoration: none;
-      color: #05070c;
+      color: #fafafa;
     }
 
     a:hover {
@@ -45,6 +46,15 @@ export class FinalCta extends LitElement {
     a:active {
       transform: translateY(0);
       font-weight: bold;
+    }
+
+    @media (max-width <= 480px) {
+      section {
+        padding: 3rem 2.5rem;
+        & h2 {
+          margin: 0 auto 3.5rem;
+        }
+      }
     }
   `;
 
