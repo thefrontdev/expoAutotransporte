@@ -49,7 +49,6 @@ export class HeroSection extends LitElement {
       text-decoration: none;
       &.primary:hover {
         background: transparent;
-        color: var(--neon);
         backdrop-filter: blur(0.5rem);
       }
       &.secondary:hover { 
@@ -76,8 +75,8 @@ export class HeroSection extends LitElement {
 
     .secondary {
       background: transparent;
-      border: 1px solid var(--neon);
-      color: var(--neon);
+      border: 1px solid var(--border);
+      color: var(--border-similar);
       padding: 1.125rem 2.625rem;
       border-radius: 0.875rem;
       box-shadow: 0 0 18px #005bfa44;
