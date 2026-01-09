@@ -49,7 +49,7 @@ class ContextSection extends LitElement {
       pointer-events: none;
     }
     
-    @media (max-width <= 480px) {
+    @media (max-width: 480px) {
       section {
         padding: 2rem 2.5rem;
         flex-flow: column;

@@ -95,7 +95,7 @@ export class HeroSection extends LitElement {
       transform: translateY(0);
     }
 
-    @media (max-width <= 480px) {
+    @media (max-width: 480px) {
       section {
         padding: 4rem 2.5rem;
         & h1 {

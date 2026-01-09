@@ -48,7 +48,7 @@ export class FinalCta extends LitElement {
       font-weight: bold;
     }
 
-    @media (max-width <= 480px) {
+    @media (max-width: 480px) {
       section {
         padding: 3rem 2.5rem;
         & h2 {
