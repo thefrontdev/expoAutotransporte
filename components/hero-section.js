@@ -103,6 +103,7 @@ export class HeroSection extends LitElement {
         width: 100%;
         box-sizing: border-box;
         padding: 4rem 2.5rem;
+        grid-template-columns: 1fr;
         & h1 {
           font-size: 2.5rem;
         }
@@ -111,7 +112,6 @@ export class HeroSection extends LitElement {
 
     @media (1024 >= width > 480px) {
       section {
-        grid-template-columns: 1fr;
         padding: 5rem 2.5rem;
       }
     }
@@ -125,11 +125,13 @@ export class HeroSection extends LitElement {
           <source src="/assets/videos/autotransporteVid.webm" type="video/webm">
         </video>
         <section>
-          <h1>Donde el autotransporte deja de exhibirse<br>y comienza a hacer negocios</h1>
-          <p>Expo Autotransporte Toluca – Hub 360</p>
-          <div class="actions">
-            <a class="primary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">Registrar marca</a>
-            <a class="secondary" href="/assets/docs/Brochure-Ejecutivo.pdf" download target="_blank" rel="noopener noreferrer">Descargar brochure</a>
+          <div class="main-content">
+            <h1>Donde el autotransporte deja de exhibirse<br>y comienza a hacer negocios</h1>
+            <p>Expo Autotransporte Toluca – Hub 360</p>
+            <div class="actions">
+              <a class="primary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">Registrar marca</a>
+              <a class="secondary" href="/assets/docs/Brochure-Ejecutivo.pdf" download target="_blank" rel="noopener noreferrer">Descargar brochure</a>
+            </div>
           </div>
         </section>
       </div>
