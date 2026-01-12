@@ -1,3 +1,9 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^www\.expoautotransporte\.com$ [NC]
-RewriteRule ^(.*)$ https://expoautotransporte.com/$1 [R=301,L]
+
+# Redirigir de HTTP a HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirigir de sin www a www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ www.tusitio.com [L,R=301]

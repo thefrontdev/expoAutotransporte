@@ -96,15 +96,15 @@ export class HeroSection extends LitElement {
     }
 
     @media (width <= 480px) {
+      video {
+        height: 100vh
+      }
       section {
         width: 100%;
         box-sizing: border-box;
         padding: 4rem 2.5rem;
         & h1 {
           font-size: 2.5rem;
-        }
-        & video {
-          height: 100vh
         }
       }
     }
