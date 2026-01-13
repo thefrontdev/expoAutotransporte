@@ -150,6 +150,9 @@ export class BentoBenefits extends LitElement {
           </div>
         </div>
       </section>
+      <section class="placendate">
+        <img src="/assets/images/datenplace.jpeg" alt="Fecha y lugar de expoautotransporte 2026">
+      </section>
     `;
   }
 }

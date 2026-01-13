@@ -34,6 +34,12 @@ export class HeroSection extends LitElement {
         #05070c40;
     }
 
+    .main-content {
+      box-sizing: border-box;
+      display: grid;
+      place-content: space-evenly;
+    }
+
     h1 {
       font-size: 4rem;
       line-height: 1.05;
@@ -110,9 +116,15 @@ export class HeroSection extends LitElement {
       }
     }
 
-    @media (1024 >= width > 480px) {
+    @media (1024px >= width > 480px) {
       section {
         padding: 5rem 2.5rem;
+      }
+    }
+
+    @media (1440px >= width) {
+      video {
+        height: 100vh;
       }
     }
   `;

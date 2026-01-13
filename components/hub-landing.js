@@ -7,6 +7,10 @@ import "./context-section.js";
 import "./value-section.js";
 import "./bento-benefits.js";
 import "./final-cta.js";
+import "./audence-reach.js";
+import "./authority-ecosystem.js";
+import "./participation-section.js";
+import "./urgency-scarcity.js";
 
 class HubLanding extends LitElement {
   static styles = [
