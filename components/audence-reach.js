@@ -22,14 +22,17 @@ export class AudenceReach extends LitElement {
         .bento {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-evenly;
             align-items: stretch;
             height: auto;
             box-sizing: border-box;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .card {
-            width: 16.25rem;
+            width: 23rem;
+            max-width: 100%;
             box-sizing: border-box;
             background: linear-gradient(180deg, rgba(14,21,43,.7), rgba(5,7,12,.9));
             border-radius: var(--radius);
@@ -44,7 +47,12 @@ export class AudenceReach extends LitElement {
                 transform .35s var(--ease),
                 box-shadow .35s var(--ease),
                 border-color .35s var(--ease);
+            text-align: center;
+            & img {
+                margin: 0 auto;
+                filter: drop-shadow(0px 0px 4px #000ffacc);
             }
+        }
 
         .card::after {
             content: '';
@@ -62,6 +70,9 @@ export class AudenceReach extends LitElement {
                 0 0 0 1px rgba(0,240,255,.6),
                 0 0 40px rgba(0,240,255,.6),
                 0 30px 60px rgba(0,0,0,.6);
+            & img {
+                filter: drop-shadow(0px 0px 3px #00faff88);
+            }
         }
 
         .card:hover::after {
@@ -103,15 +114,19 @@ export class AudenceReach extends LitElement {
                 <p>Expo Autotransporte Toluca – Hub 360 convoca a una audiencia <strong>especializada y con poder de decisión</strong>:</p>
                 <div class="bento">
                     <div class="card">
+                        <img alt="Icono de ejecutivos" src="/assets/images/icons/director.png" />
                         <p class="card-title">Directores, gerentes y jefaturas.</p>
                     </div>
                     <div class="card">
+                        <img alt="Icono de compras" src="/assets/images/icons/sales.png" />
                         <p class="card-title">Compras, operaciones, logística y mantenimiento.</p>
                     </div>
                     <div class="card">
+                        <img alt="Icono de líderes técnicos" src="/assets/images/icons/technical-leaders.png" />
                         <p class="card-title">Líderes técnicos y estratégicos.</p>
                     </div>
                     <div class="card">
+                        <img alt="Icono de instituciones" src="/assets/images/icons/institutions.png" />
                         <p class="card-title">Instituciones y asociaciones del sector.</p>
                     </div>
                 </div>

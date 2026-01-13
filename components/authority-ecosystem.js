@@ -25,7 +25,8 @@ export class AuthorityEcosystem extends LitElement {
             height: 100%;
             grid-template-columns: 1fr 1fr;
             padding: 2rem;
-            background: 
+            gap: 1.5rem;
+            background: url('/assets/images/icons/hub.png') no-repeat center,
                 radial-gradient(
                     circle at center,
                     transparent 40%,
@@ -33,17 +34,17 @@ export class AuthorityEcosystem extends LitElement {
                 ),
                 radial-gradient(
                     circle at center,
-                    #05070ccc 9%,
-                    #000ffa80 10%,
+                    #05070cf2 9%,
+                    #00f0ff80 10%,
                     transparent 11%
                 ),   
                 conic-gradient(
-                    transparent 74deg, #000ffa80 76deg, 
-                    transparent 78deg, transparent 102deg, 
-                    #000ffa80 104deg, transparent 106deg, 
-                    transparent 254deg, #000ffa80 256deg, 
-                    transparent 258deg, transparent 281deg, 
-                    #000ffa80 283deg, transparent 285deg
+                    transparent 75deg, #00f0ff80 76deg, 
+                    transparent 77deg, transparent 103deg, 
+                    #00f0ff80 104deg, transparent 105deg, 
+                    transparent 255deg, #00f0ff80 256deg, 
+                    transparent 257deg, transparent 282deg, 
+                    #00f0ff80 283deg, transparent 284deg
                 );
         }
         
@@ -58,7 +59,7 @@ export class AuthorityEcosystem extends LitElement {
                 0 0 0 1px rgba(0,240,255,.15),
                 0 10px 30px rgba(0,0,0,.4),
                 inset 0 0 20px rgba(0,240,255,.05);
-            padding: 28px;
+            padding: 1.75rem;
             transition:
                 transform .35s var(--ease),
                 box-shadow .35s var(--ease),
@@ -101,6 +102,27 @@ export class AuthorityEcosystem extends LitElement {
             font-size: 1.25rem;
             font-weight: bold;
             margin-bottom: 1rem;
+        }
+
+        @media (max-width: 480px) {
+					section {
+						padding: 4rem 2.5rem;
+						& .hub {
+							grid-template-columns: 1fr;
+							background:
+                radial-gradient(
+                    circle at center,
+                    #00f0ff1a,
+                    transparent 50%
+                );
+							padding: 0;
+							& .card {
+								width: 100%;
+								align-self: start;
+                justify-self: start;
+							}
+						}
+					}
         }
     `;
     
