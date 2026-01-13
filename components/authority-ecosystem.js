@@ -29,11 +29,11 @@ export class AuthorityEcosystem extends LitElement {
                 radial-gradient(
                     circle at center,
                     transparent 40%,
-                    #191919 60%
+                    #05070c 60%
                 ),
                 radial-gradient(
                     circle at center,
-                    #191919cc 9%,
+                    #05070ccc 9%,
                     #000ffa80 10%,
                     transparent 11%
                 ),   
@@ -63,7 +63,17 @@ export class AuthorityEcosystem extends LitElement {
                 transform .35s var(--ease),
                 box-shadow .35s var(--ease),
                 border-color .35s var(--ease);
+            &:nth-child(2) {
+                justify-self: end;
             }
+            &:nth-child(3) {
+                align-self: end;
+            }
+            &:last-child {
+                align-self: end;
+                justify-self: end;
+            }
+        }
 
         .card::after {
             content: '';
