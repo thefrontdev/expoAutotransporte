@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "/assets/js/lit-core.min.js";
 
 export class AudenceReach extends LitElement {
-    static style = css`
+    static styles = css`
         section {
             position: relative;
             padding: 5rem 7.5rem;

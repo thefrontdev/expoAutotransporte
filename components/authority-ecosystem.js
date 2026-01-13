@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "/assets/js/lit-core.min.js";
 
-export class AuthorityExosystem extends LitElement {
-    static style = css`
+export class AuthorityEcosystem extends LitElement {
+    static styles = css`
         section {
             position: relative;
             padding: 5rem 7.5rem;
@@ -123,4 +123,4 @@ export class AuthorityExosystem extends LitElement {
     }
 }
 
-customElements.define('authority-exosystem', AuthorityExosystem);
+customElements.define('authority-ecosystem', AuthorityEcosystem);
