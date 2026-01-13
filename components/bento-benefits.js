@@ -79,7 +79,33 @@ export class BentoBenefits extends LitElement {
       margin-bottom: 1rem;
     }
 
-    .big { grid-column: span 2; }
+    .placendate {
+      padding: 2rem 0;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0.125rem;
+        background: linear-gradient(90deg,  #05070c 10%, #000ffa40, var(--neon), #000ffa40, #05070c 90%);
+        box-shadow: 0 -4px 10px #00f0ff80, 0 -6px 100px #00f0ff40;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 0.125rem;
+        background: linear-gradient(90deg,  #05070c 10%, #000ffa40, var(--neon), #000ffa40, #05070c 90%);
+        box-shadow: 0 -4px 10px #00f0ff80, 0 -6px 100px #00f0ff40;
+      }
+      & img {
+        width: 100%;
+        height: auto;
+      }
+    }
 
     @media (max-width: 768px) {
       .card {

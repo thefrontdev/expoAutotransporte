@@ -30,6 +30,10 @@ class HubLanding extends LitElement {
         <context-section></context-section>
         <value-section></value-section>
         <bento-benefits></bento-benefits>
+        <audence-reach></audence-reach>
+        <authority-ecosystem></authority-ecosystem>
+        <participation-section></participation-section>
+        <urgency-scarcity></urgency-scarcity>
         <final-cta></final-c>
       </main>
     `;
