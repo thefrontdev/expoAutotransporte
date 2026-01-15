@@ -23,12 +23,19 @@ export class FinalCta extends LitElement {
 
     h2 { font-size: 48px; }
 
+    .actions {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
     a {
       margin-top: 40px;
       padding: 22px 54px;
       border-radius: 16px;
       background: var(--border);
-      border: 1px solid var(--border-similar)
+      border: 1px solid var(--border-similar);
       box-shadow:
         0 0 30px var(--border-similar),
         0 0 80px #005bfa88;
@@ -36,6 +43,11 @@ export class FinalCta extends LitElement {
       border: none;
       text-decoration: none;
       color: #fafafa;
+      &.secondary {
+        background: transparent;
+        border: 1px solid var(--border-similar);
+        color: var(--border-similar);
+      }
     }
 
     a:hover {
@@ -54,6 +66,10 @@ export class FinalCta extends LitElement {
         & h2 {
           margin: 0 auto 3.5rem;
         }
+        .actions {
+          flex-direction: column;
+          gap: 1.5rem;
+        }
       }
     }
   `;
@@ -62,9 +78,14 @@ export class FinalCta extends LitElement {
     return html`
       <section>
         <h2>El futuro del autotransporte se construye hoy</h2>
-        <a href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">
-          Registrar participación
-        </a>
+        <div class="actions">
+          <a href="https://forms.gle/oXoKGdyvTL7rowvU6" target="_blank" rel="noopener noreferrer">
+            Registrar participación
+          </a>
+          <a class="secondary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">
+            Solicita asesoría personalizada
+          </a>
+        </div>
       </section>
     `;
   }

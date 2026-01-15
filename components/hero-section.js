@@ -23,9 +23,11 @@ export class HeroSection extends LitElement {
       position: absolute;
       top: 0;
       left: 0;
+      width: 100%;
       min-height: 100vh;
+      box-sizing: border-box;
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       padding: 2.1rem 7.5rem;
       background:
         radial-gradient(circle at 30% 10%, #0b1020, transparent 60%),
@@ -34,21 +36,36 @@ export class HeroSection extends LitElement {
         #05070c40;
     }
 
-    .main-content {
-      box-sizing: border-box;
-      display: grid;
-      place-content: space-evenly;
-    }
-
     h1 {
       font-size: 4rem;
       line-height: 1.05;
       letter-spacing: -0.02em;
+      max-width: 50rem;
+      margin-top: 0;
     }
 
     p {
       max-width: 35rem;
       color: var(--text-muted);
+      &.title {
+        font-size: 1.75rem;
+        font-weight: bold;
+      }
+      &.date {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+      &.location {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: var(--border);
+        & span {
+          background: url('/assets/images/icons/location.png') no-repeat center/contain;
+          display: inline-block;
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
     }
 
     a, button {
@@ -112,6 +129,7 @@ export class HeroSection extends LitElement {
         grid-template-columns: 1fr;
         & h1 {
           font-size: 2.5rem;
+          max-width: 100%;
         }
       }
     }
@@ -138,8 +156,15 @@ export class HeroSection extends LitElement {
         </video>
         <section>
           <div class="main-content">
-            <h1>Donde el autotransporte deja de exhibirse<br>y comienza a hacer negocios</h1>
-            <p>Expo Autotransporte Toluca – Hub 360</p>
+            <h1>Donde el autotransporte deja de exhibirse y comienza a hacer negocios</h1>
+            <p class="title">Expo Autotransporte Toluca – Hub 360</p>
+            <p class="date">Del 4 al 6 de marzo de 2026</p>
+            <p class="location">
+              <a href="https://maps.app.goo.gl/mZyKYYby8h1VrvNf9" target="_blank" rel="noopener noreferrer" id="location">
+              <span></span>
+              Centro de Convenciones del Estado de México
+              </a>
+            </p>
             <div class="actions">
               <a class="primary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">Registrar marca</a>
               <a class="secondary" href="/assets/docs/Brochure-Ejecutivo.pdf" download target="_blank" rel="noopener noreferrer">Descargar brochure</a>
