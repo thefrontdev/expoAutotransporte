@@ -73,7 +73,7 @@ class ContextSection extends LitElement {
           </p>
         </div>
         <div class="image">
-          <img src="/assets/images/postervideo.avif" alt="camion neon">
+          <img src="/assets/images/6.png" alt="camion neon">
         </div>
       </section>
     `;

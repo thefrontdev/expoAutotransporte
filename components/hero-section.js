@@ -167,7 +167,7 @@ export class HeroSection extends LitElement {
             </p>
             <div class="actions">
               <a class="primary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">Registrar marca</a>
-              <a class="secondary" href="/assets/docs/Brochure-Ejecutivo.pdf" download target="_blank" rel="noopener noreferrer">Descargar brochure</a>
+              <a class="secondary" href="https://drive.usercontent.google.com/download?id=12pIJRNFY-x3K2aizI8FCVgZERlCzOomd&export=download&authuser=0&confirm=t&uuid=eb1c7fbe-5147-4b7b-a7ef-cb7344a5f12b&at=ANTm3cyoVHk3-X9bHnRw-H5FX1iu%3A1768597241397" download target="_blank" rel="noopener noreferrer">Descargar brochure</a>
             </div>
           </div>
         </section>
