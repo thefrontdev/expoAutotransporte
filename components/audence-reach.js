@@ -22,16 +22,15 @@ export class AudenceReach extends LitElement {
         .bento {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: stretch;
             height: auto;
             box-sizing: border-box;
-            gap: 1.5rem;
             margin-bottom: 2rem;
         }
 
         .card {
-            width: 23rem;
+            width: 16.5rem;
             max-width: 100%;
             box-sizing: border-box;
             background: linear-gradient(180deg, rgba(14,21,43,.7), rgba(5,7,12,.9));
@@ -42,7 +41,7 @@ export class AudenceReach extends LitElement {
                 0 0 0 1px rgba(0,240,255,.15),
                 0 10px 30px rgba(0,0,0,.4),
                 inset 0 0 20px rgba(0,240,255,.05);
-            padding: 28px;
+            padding: 1.25rem;
             transition:
                 transform .35s var(--ease),
                 box-shadow .35s var(--ease),
@@ -80,7 +79,7 @@ export class AudenceReach extends LitElement {
         }
 
         .card-title {
-            font-size: 1.25rem;
+            font-size: 1.125rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }

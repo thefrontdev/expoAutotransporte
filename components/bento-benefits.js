@@ -22,10 +22,11 @@ export class BentoBenefits extends LitElement {
     .bento {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: space-evenly;
       align-items: stretch;
       height: auto;
       box-sizing: border-box;
+      gap: 1.5rem;
     }
 
     .card,
@@ -34,7 +35,7 @@ export class BentoBenefits extends LitElement {
     }
 
     .card {
-      width: 16.25rem;
+      width: 23rem;
       box-sizing: border-box;
       background: linear-gradient(180deg, rgba(14,21,43,.7), rgba(5,7,12,.9));
       border-radius: var(--radius);
@@ -44,7 +45,7 @@ export class BentoBenefits extends LitElement {
         0 0 0 1px rgba(0,240,255,.15),
         0 10px 30px rgba(0,0,0,.4),
         inset 0 0 20px rgba(0,240,255,.05);
-      padding: 28px;
+      padding: 1.25rem;
       transition:
         transform .35s var(--ease),
         box-shadow .35s var(--ease),

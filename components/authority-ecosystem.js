@@ -5,6 +5,11 @@ export class AuthorityEcosystem extends LitElement {
         section {
             position: relative;
             padding: 5rem 7.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+            box-sizing: border-box;
             & h2::before {
                 content: '';
                 position: absolute;
@@ -17,35 +22,27 @@ export class AuthorityEcosystem extends LitElement {
                 margin-top: 1rem;
                 box-shadow: 10px 0 20px var(--neon);
             }
+            & .text {
+                width: 100%;
+            }
+            & .image {
+                width: 100%;
+                box-sizing: border-box;
+                & img {
+                    width: 100%;
+                    border-radius: var(--radius);
+                    border: 2px solid var(--border);
+                    box-shadow:
+                        0 0 30px var(--border80),
+                        0 0 80px var(--border20);
+                }
+            }
         }
         
         .hub {
-            display: grid;
-            width: 100%;
-            height: 100%;
-            grid-template-columns: 1fr 1fr;
-            padding: 2rem;
-            gap: 1.5rem;
-            background: url('/assets/images/icons/hub.png') no-repeat center,
-                radial-gradient(
-                    circle at center,
-                    transparent 40%,
-                    #05070c 60%
-                ),
-                radial-gradient(
-                    circle at center,
-                    #05070cf2 9%,
-                    #00f0ff80 10%,
-                    transparent 11%
-                ),   
-                conic-gradient(
-                    transparent 75deg, #00f0ff80 76deg, 
-                    transparent 77deg, transparent 103deg, 
-                    #00f0ff80 104deg, transparent 105deg, 
-                    transparent 255deg, #00f0ff80 256deg, 
-                    transparent 257deg, transparent 282deg, 
-                    #00f0ff80 283deg, transparent 284deg
-                );
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
         
         .card {
@@ -59,21 +56,11 @@ export class AuthorityEcosystem extends LitElement {
                 0 0 0 1px rgba(0,240,255,.15),
                 0 10px 30px rgba(0,0,0,.4),
                 inset 0 0 20px rgba(0,240,255,.05);
-            padding: 1.75rem;
+            padding: 1.25rem;
             transition:
                 transform .35s var(--ease),
                 box-shadow .35s var(--ease),
                 border-color .35s var(--ease);
-            &:nth-child(2) {
-                justify-self: end;
-            }
-            &:nth-child(3) {
-                align-self: end;
-            }
-            &:last-child {
-                align-self: end;
-                justify-self: end;
-            }
         }
 
         .card::after {
@@ -99,7 +86,7 @@ export class AuthorityEcosystem extends LitElement {
         }
 
         .card-title {
-            font-size: 1.25rem;
+            font-size: 1rem;
             font-weight: bold;
             margin-bottom: 1rem;
         }
@@ -129,27 +116,32 @@ export class AuthorityEcosystem extends LitElement {
     render() {
         return html`
         <section>
-            <h2>Un evento respaldado por la industria</h2>
-            <p>
-                Expo Autotransporte Toluca se ha consolidado como <strong>el punto de encuentro clave del sector en el centro del país</strong>.
-            </p>
-            <div class="hub">
-                <div class=card>
-                    <p class="card-title">Respaldo institucional y asociaciones estratégicas.</p>
+            <div class="text">
+                <h2>Un evento respaldado por la industria</h2>
+                <p>
+                    Expo Autotransporte Toluca se ha consolidado como <strong>el punto de encuentro clave del sector en el centro del país</strong>.
+                </p>
+                <div class="hub">
+                    <div class=card>
+                        <p class="card-title">Respaldo institucional y asociaciones estratégicas.</p>
+                    </div>
+                    <div class=card>
+                        <p class="card-title">Participación de marcas líderes y referentes técnicos.</p>
+                    </div>
+                    <div class=card>
+                        <p class="card-title">Resultados comprobados en asistencia, alcance y generación de negocios.</p>
+                    </div>
+                    <div class=card>
+                        <p class="card-title">Crecimiento sostenido edición tras edición.</p>
+                    </div>
                 </div>
-                <div class=card>
-                    <p class="card-title">Participación de marcas líderes y referentes técnicos.</p>
-                </div>
-                <div class=card>
-                    <p class="card-title">Resultados comprobados en asistencia, alcance y generación de negocios.</p>
-                </div>
-                <div class=card>
-                    <p class="card-title">Crecimiento sostenido edición tras edición.</p>
-                </div>
+                <p>
+                    Participar es asociar tu marca con <strong>autoridad, confianza y liderazgo sectorial</strong>.
+                </p>
             </div>
-            <p>
-                Participar es asociar tu marca con <strong>autoridad, confianza y liderazgo sectorial</strong>.
-            </p>
+            <div class="image">
+                <img src="/assets/images/9.png" alt="authority ecosystem">
+            </div>
         </section>
         `;
     }

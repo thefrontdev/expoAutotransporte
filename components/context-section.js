@@ -12,6 +12,7 @@ class ContextSection extends LitElement {
       gap: 2rem;
       box-sizing: border-box;
       & .text {
+        width: 100%;
         & h2::before {
           content: '';
           position: absolute;

@@ -5,6 +5,11 @@ export class UrgencyScarcity extends LitElement {
     section {
       position: relative;
       padding: 5rem 7.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      box-sizing: border-box;
       & h2::before {
         content: '';
         position: absolute;
@@ -16,6 +21,21 @@ export class UrgencyScarcity extends LitElement {
         background: linear-gradient(90deg, #05070c, var(--border80), var(--neon));
         margin-top: 1rem;
         box-shadow: 10px 0 20px var(--neon);
+      }
+      & .image {
+        width: 100%;
+        box-sizing: border-box;
+        & img {
+          width: 100%;
+          border-radius: var(--radius);
+          border: 2px solid var(--border);
+          box-shadow:
+            0 0 30px var(--border80),
+            0 0 80px var(--border20);
+        }
+      }
+      & .text {
+        width: 100%;
       }
     }
 
@@ -34,7 +54,7 @@ export class UrgencyScarcity extends LitElement {
     }
 
     .card {
-      width: 16.25rem;
+      width: 10.5rem;
       box-sizing: border-box;
       background: linear-gradient(180deg, rgba(14,21,43,.7), rgba(5,7,12,.9));
       border-radius: var(--radius);
@@ -44,7 +64,7 @@ export class UrgencyScarcity extends LitElement {
         0 0 0 1px rgba(0,240,255,.15),
         0 10px 30px rgba(0,0,0,.4),
         inset 0 0 20px rgba(0,240,255,.05);
-      padding: 28px;
+      padding: 1.25rem;
       transition:
         transform .35s var(--ease),
         box-shadow .35s var(--ease),
@@ -110,29 +130,34 @@ export class UrgencyScarcity extends LitElement {
   render() {
     return html`
       <section>
-        <h2>Participación limitada a marcas estratégicas</h2>
-        <p>
-          El ecosistema Hub 360 no es abierto ni masivo.<br>
-          Los espacios son <strong>limitados y cuidadosamente seleccionados</strong>.<br><br>
-          Quienes se registran de forma anticipada acceden a:
-        </p>
-        <div class="bento">
-          <div class="card">
-            <img src="/assets/images/icons/star.png" alt="Icono de estrella" />
-            <p class="card-title">Mejores ubicaciones.</p>
+        <div class="text">
+          <h2>Participación limitada a marcas estratégicas</h2>
+          <p>
+            El ecosistema Hub 360 no es abierto ni masivo.<br>
+            Los espacios son <strong>limitados y cuidadosamente seleccionados</strong>.<br><br>
+            Quienes se registran de forma anticipada acceden a:
+          </p>
+          <div class="bento">
+            <div class="card">
+              <img src="/assets/images/icons/star.png" alt="Icono de estrella" />
+              <p class="card-title">Mejores ubicaciones.</p>
+            </div>
+            <div class="card">
+              <img src="/assets/images/icons/visibility.png" alt="Icono de visibilidad" />
+              <p class="card-title">Mayor visibilidad.</p>
+            </div>
+            <div class="card">
+              <img src="/assets/images/icons/chart.png" alt="Icono de gráfico de ventas a la alta" />
+              <p class="card-title">Prioridad comercial y estratégica.</p>
+            </div>
           </div>
-          <div class="card">
-            <img src="/assets/images/icons/visibility.png" alt="Icono de visibilidad" />
-            <p class="card-title">Mayor visibilidad.</p>
-          </div>
-          <div class="card">
-            <img src="/assets/images/icons/chart.png" alt="Icono de gráfico de ventas a la alta" />
-            <p class="card-title">Prioridad comercial y estratégica.</p>
-          </div>
+          <p>
+            <strong>Las decisiones tempranas generan ventajas reales.</strong>
+          </p>
         </div>
-        <p>
-          <strong>Las decisiones tempranas generan ventajas reales.</strong>
-        </p>
+        <div class="image">
+          <img src="/assets/images/11.png" alt="urgency and scarcity">
+        </div>
       </section>
     `;
   }

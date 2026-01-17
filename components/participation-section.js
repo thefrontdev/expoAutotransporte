@@ -5,17 +5,37 @@ export class ParticipationSection extends LitElement {
       section {
         position: relative;
         padding: 5rem 7.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        box-sizing: border-box;
         & h2::before {
           content: '';
           position: absolute;
-          left: 0;
+          right: 0;
           z-index: -1;
           display: block;
           width: 8%;
           height: 2px;
-          background: linear-gradient(90deg, #05070c, var(--border80), var(--neon));
+          background: linear-gradient(90deg, var(--neon), var(--border80), #05070c);
           margin-top: 1rem;
-          box-shadow: 10px 0 20px var(--neon);
+          box-shadow: -10px 0 20px var(--neon);
+        }
+        & .image {
+          width: 100%;
+          box-sizing: border-box;
+          & img {
+            width: 100%;
+            border-radius: var(--radius);
+            border: 2px solid var(--border);
+            box-shadow:
+              0 0 30px var(--border80),
+              0 0 80px var(--border20);
+          }
+        }
+        & .text {
+          width: 100%;
         }
       }
 
@@ -26,7 +46,7 @@ export class ParticipationSection extends LitElement {
         align-items: stretch;
         height: auto;
         box-sizing: border-box;
-        margin-top: 3rem;
+        gap: 1rem;
       }
 
       .card,
@@ -45,11 +65,12 @@ export class ParticipationSection extends LitElement {
           0 0 0 1px rgba(0,240,255,.15),
           0 10px 30px rgba(0,0,0,.4),
           inset 0 0 20px rgba(0,240,255,.05);
-        padding: 28px;
+        padding: 1.25rem;
         transition:
           transform .35s var(--ease),
           box-shadow .35s var(--ease),
           border-color .35s var(--ease);
+        margin-top: 1.5rem;
       }
 
       .card {
@@ -130,7 +151,11 @@ export class ParticipationSection extends LitElement {
 
     render() {
       return html`
-        <section>
+      <section>
+        <div class="image">
+          <img src="/assets/images/12.png" alt="participation levels">
+        </div>
+        <div class="text">
           <h2>Elige cómo quieres posicionarte en la industria</h2>
           <div class="bento">
             <div class="card">
@@ -153,7 +178,8 @@ export class ParticipationSection extends LitElement {
           <p>
             Cada nivel está diseñado para <strong>maximizar visibilidad, impacto y retorno</strong>, alineado a tus objetivos de negocio.
           </p>
-        </section>
+        </div>
+      </section>
       `;
     }
 }

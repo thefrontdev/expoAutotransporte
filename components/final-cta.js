@@ -80,7 +80,7 @@ export class FinalCta extends LitElement {
         <h2>El futuro del autotransporte se construye hoy</h2>
         <div class="actions">
           <a href="https://forms.gle/oXoKGdyvTL7rowvU6" target="_blank" rel="noopener noreferrer">
-            Registrar participación
+            Registro para visitantes
           </a>
           <a class="secondary" href="https://wa.link/9nxgeo" target="_blank" rel="noopener noreferrer">
             Solicita asesoría personalizada
