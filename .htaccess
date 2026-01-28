@@ -1,9 +1,0 @@
-RewriteEngine On
-
-# Redirigir de HTTP a HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Redirigir de sin www a www
-RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ www.tusitio.com [L,R=301]
