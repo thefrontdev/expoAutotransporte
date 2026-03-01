@@ -158,7 +158,7 @@ export class HeroSection extends LitElement {
           <div class="main-content">
             <h1>Donde el autotransporte deja de exhibirse y comienza a hacer negocios</h1>
             <p class="title">Expo Autotransporte Toluca – Hub 360</p>
-            <p class="date">Del 4 al 6 de marzo de 2026</p>
+            <p class="date">Del 21 al 23 de julio de 2026</p>
             <p class="location">
               <a href="https://maps.app.goo.gl/mZyKYYby8h1VrvNf9" target="_blank" rel="noopener noreferrer" id="location">
               <span></span>
