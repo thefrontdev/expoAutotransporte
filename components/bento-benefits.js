@@ -178,7 +178,7 @@ export class BentoBenefits extends LitElement {
         </div>
       </section>
       <section class="placendate">
-        <img src="/assets/images/datenplace.jpeg" alt="Fecha y lugar de expoautotransporte 2026">
+        <img src="/assets/images/eathDates.jpeg" alt="Fecha y lugar de expoautotransporte 2026">
       </section>
     `;
   }
